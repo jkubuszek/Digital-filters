@@ -1,3 +1,11 @@
+#my files
+#test.cpp
+sciplot/
+merge_repo.sh
+full_code.txt
+test
+*.pdf
+
 # Prerequisites
 *.d
 

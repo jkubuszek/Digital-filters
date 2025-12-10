@@ -8,59 +8,41 @@
 
 class FIR : public Filter{
 private:
-    std::vector<double> coeffs_ = {};
-    size_t size_ = coeffs_.size();
-
 public:
-    FIR(std::vector<double> &c) : coeffs_(c), Filter("FIR") {}
+    FIR(const std::vector<double> &b) : Filter("FIR", b, {1.0}) {}
     
     void printCoeffs() const override{
-        std::cout << "all " << name_ << " filter coefficients:" << std::endl;
+        std::cout << "all " << name_ << " filter coefficients: b" << std::endl;
         std::cout << "["; 
-        for(int i = 0; i < size_; i++){
-            std::cout << coeffs_[i] << ",";
+        for(int i = 0; i < b_coeffs.size(); i++){
+            std::cout << b_coeffs[i] << ",";
         }
         std::cout << "]" << std::endl;   
+
+       std::cout << "filter coeffincients a = 1.0 since it is a FIR filter" << std::endl;  
     }
     
-    std::vector<double> getCoeffs() const override{
-        return coeffs_;
+    FilterCoeffs getCoeffs() const override{
+        return { b_coeffs, {1.0} };
     }
 
-    std::vector<double> response(const std::vector<double> &x) override{
-        int y_length = x.size() + coeffs_.size() - 1;
-        std::vector<double> y = {};
+    std::vector<double> response(const std::vector<double> &x, const int y_len = -1) override{
+        int y_length;
+        if (y_len > 0) {
+            y_length = (size_t)y_len;
+        } else {
+            y_length = x.size();
+        }
+        std::vector<double> y(y_length, 0.0);
         for (int n = 0; n < y_length; n++){ //calculating the response
             double res = 0.0;
-            for (int m = 0; m < coeffs_.size(); m++){
-                if ((0 <= (n-m)) && ((n-m) <= x.size())){
-                    res += coeffs_[m]*x[n-m];
+            for (int m = 0; m < b_coeffs.size(); m++){
+                if ((0 <= (n-m)) && ((n-m) < x.size())){
+                    res += b_coeffs[m]*x[n-m];
                 }
             }
-            y.push_back(res);                
+            y[n] = res;                
         }
         return y;
     }
-
-    std::vector<double> windowed_response(const std::vector<double> &x, const Window &win) override{
-        if(win.size() != x.size()){
-            std::cerr << "Error: input and window size do not match in windowed_response()" << std::endl;
-            return {};
-        } else {
-            std::vector<double> y = response(x);
-            const auto& w = win.getCoeffs();
-            for(int n = 0; n < size(x); n++){
-                y[n] *= w[n];
-            }        
-            std::cout << "windowed response:" << std::endl;
-            std::cout << "["; 
-            for(int i = 0; i < y.size(); i++){
-                std::cout << y[i] << ",";
-            }
-            std::cout << "]" << std::endl;   
-    
-            return y;
-        }
-    }
-    
 };
