@@ -7,7 +7,7 @@
 #include "sciplot/sciplot.hpp"
 #include <random>
 namespace sp = sciplot;
-//compilation: g++ -std=c++17 -o test test.cpp -I.
+
 
 void plot2d(const std::vector<double> &y, std::string name){
     sp::Plot2D plot;
@@ -40,7 +40,7 @@ std::vector<double> noisy_sine(int size, double freq, double amp, double noise_l
 
 int main(){
     std::vector<double> fir_coeffs(10, 0.1); //smoothing filter
-    std::vector<double> iir_coeffs_b = {0.1}; //
+    std::vector<double> iir_coeffs_b = {0.1}; 
     std::vector<double> iir_coeffs_a = {1.0, -0.9};
     FIR fir(fir_coeffs);
     IIR iir(iir_coeffs_b, iir_coeffs_a);
@@ -64,9 +64,5 @@ int main(){
     plot2d(impulse,"single impulse");
     plot2d(y_iir, "iir");
 
-
-
-    
-    
     return 0;
 }

@@ -16,14 +16,14 @@ public:
     }
     
     void printCoeffs() const override{
-        std::cout << "all " << name_ << " filter coefficients: b" << std::endl;
+        std::cout << "all " << name << " filter coefficients: b" << std::endl;
         std::cout << "["; 
         for(int i = 0; i < b_coeffs.size(); i++){
             std::cout << b_coeffs[i] << ",";
         }
         std::cout << "]" << std::endl;   
 
-        std::cout << "all " << name_ << " filter coefficients: a" << std::endl;
+        std::cout << "all " << name << " filter coefficients: a" << std::endl;
         std::cout << "["; 
         for(int i = 0; i < a_coeffs.size(); i++){
             std::cout << a_coeffs[i] << ",";
@@ -60,5 +60,10 @@ std::vector<double> response(const std::vector<double> &x, const int y_len = -1)
             y[n] = (sum_b - sum_a)/a0;
         }
        return y;
+    }
+    
+    void setCoeffs(const std::vector<double> &b, const std::vector<double> &a)override{
+        b_coeffs = b;
+        a_coeffs = a;
     }
 };

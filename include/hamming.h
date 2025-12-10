@@ -6,15 +6,15 @@
 #include "window.h"
 #include <cmath>
 
-class Hanning : public Window{
+class Hamming : public Window{
 private:
 
 public:
-    Hanning(size_t N) : Window("Hanning") { 
+    Hamming(size_t N) : Window("Hamming") { 
         coeffs_.resize(N);
         
         for(int i = 0; i < N; i++){
-            coeffs_[i] = 0.5*(1-cos(2*M_PI*i/((double)N - 1)));
+            coeffs_[i] = 0.54-0.46*std::cos(2*M_PI*i/((double)N - 1));
         }
     }
 };

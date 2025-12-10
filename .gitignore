@@ -6,6 +6,12 @@ full_code.txt
 test
 *.pdf
 
+build/
+.vscode/
+.cache/
+*.pdf
+*.csv
+
 # Prerequisites
 *.d
 
