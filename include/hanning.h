@@ -11,10 +11,11 @@ private:
 
 public:
     Hanning(size_t N) : Window("Hanning") { 
-        coeffs_.resize(N);
+        coeffs.resize(N);
         
         for(int i = 0; i < N; i++){
-            coeffs_[i] = 0.5*(1-std::cos(2*M_PI*i/((double)N - 1)));
+            coeffs[i] = 0.5*(1-std::cos(2*M_PI*i/((double)N - 1)));
         }
     }
+    Hanning() : Window(){}
 };

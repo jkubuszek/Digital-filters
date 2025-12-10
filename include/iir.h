@@ -14,6 +14,7 @@ public:
             a_coeffs = {1.0};
         }
     }
+    IIR() : Filter(){}
     
     void printCoeffs() const override{
         std::cout << "all " << name << " filter coefficients: b" << std::endl;

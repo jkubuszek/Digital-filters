@@ -6,22 +6,9 @@
 #include "iir.h"
 #include "sciplot/sciplot.hpp"
 #include <random>
-namespace sp = sciplot;
+#include "plots.h"
 
 
-void plot2d(const std::vector<double> &y, std::string name){
-    sp::Plot2D plot;
-    std::vector<double> x_axis;
-    for(int i = 0; i < y.size(); i++){
-        x_axis.push_back((double)i);
-    }
-    std::valarray<double> vx(x_axis.data(), x_axis.size());
-    std::valarray<double> vy(y.data(), y.size());
-    plot.drawCurve(vx, vy);
-    sciplot::Figure fig = {{plot}}; 
-    sp::Canvas canvas = {{fig}};
-    canvas.save(name + ".pdf");
-}
 std::vector<double> noisy_sine(int size, double freq, double amp, double noise_level) {
     std::vector<double> signal;
     signal.reserve(size);
@@ -48,21 +35,39 @@ int main(){
     Hamming h1(fir_coeffs.size());
     Hamming h2(iir_coeffs_b.size());
 
-    int x_size = 20;
-    std::vector<double> impulse(x_size,0.0);
-    impulse[0] = 1.0; //single impulse, 19 - zero-padding
+    //filters showcase
+    // int x_size = 20;
+    // std::vector<double> impulse(x_size,0.0);
+    // impulse[0] = 1.0; //single impulse, 19 - zero-padding
 
     // fir.applyWindow(h1);
     // iir.applyWindow(h2);
     
-    std::vector sine = noisy_sine(200, 0.1, 1, 0.1);
-    std::vector<double> y_fir = fir.response(sine);
-    std::vector<double> y_iir = iir.response(impulse);
+    // std::vector sine = noisy_sine(200, 0.1, 1, 0.1);
+    // std::vector<double> y_fir = fir.response(sine);
+    // std::vector<double> y_iir = iir.response(impulse);
    
-    plot2d(sine, "sine");
-    plot2d(y_fir, "fir");
-    plot2d(impulse,"single impulse");
-    plot2d(y_iir, "iir");
+    // plot2d(sine, "sine");
+    // plot2d(y_fir, "fir");
+    // plot2d(impulse,"single impulse");
+    // plot2d(y_iir, "iir");
 
+
+    // lowpass, highpass filters and bodeplot showcase
+    int fs = 1000;
+    FIR lowpass;
+    lowpass.design_low_pass(20, 400, fs);
+    Hamming hamming(lowpass.getCoeffs().b.size());
+    plot2d(lowpass.bode(fs).freq, lowpass.bode(fs).mag_db, "lowpass bode without window");
+    lowpass.applyWindow(hamming);
+    plot2d(lowpass.bode(fs).freq, lowpass.bode(fs).mag_db, "lowpass bode with hamming window");
+
+    
+    FIR highpass;
+    highpass.design_high_pass(20, 400, fs);    
+    plot2d(highpass.bode(fs).freq, highpass.bode(fs).mag_db, "highpass bode without window");
+    highpass.applyWindow(hamming);
+    plot2d(highpass.bode(fs).freq, highpass.bode(fs).mag_db, "highpass bode with hamming window");
+    
     return 0;
 }

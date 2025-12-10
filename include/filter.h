@@ -14,20 +14,19 @@ struct BodeData {
     std::vector<double> mag_db; 
 };
 
-
 class Filter{
 private:
     
 protected:
-    std::string name = "";
+    std::string name;
     std::vector<double> b_coeffs = {};
     std::vector<double> a_coeffs = {};
 public:
     Filter(std::string n, const std::vector<double> &b,  const std::vector<double> &a) : name(n), b_coeffs(b), a_coeffs(a) {}
     Filter(){
         b_coeffs = {0.0};
-        a_coeffs = {0.0};
-        name = "unnamed filter";
+        a_coeffs = {1.0};
+        name = "";
     }
 
     virtual FilterCoeffs getCoeffs() const = 0;
@@ -53,24 +52,22 @@ public:
         }
     }
 
-    BodeData bode(const Filter &filter, double fs, int plot_points = 200){
-        BodeData data;
-        FilterCoeffs coeffs = filter.getCoeffs();
-        
+    BodeData bode(double fs, int plot_points = 200){
+        BodeData data;                
         for(int i = 0; i < plot_points; i++){       
-            double f = fs/2.0 * i * (plot_points-1);   
+            double f = fs/2.0 * i / (plot_points-1);   
             double omega = 2*M_PI*f/fs;
 
             std::complex<double> z = std::polar(1.0, -omega);
 
             std::complex<double> num(0.0, 0.0); //transmitance numerator
-            for (size_t k = 0; k < coeffs.b.size(); k++) {
-                num += coeffs.b[k] * std::pow(z, (double)k);
+            for (size_t k = 0; k < b_coeffs.size(); k++) {
+                num += b_coeffs[k] * std::pow(z, (double)k);
             }
 
             std::complex<double> den(0.0, 0.0); //transmitance denumerator
-            for (size_t k = 0; k < coeffs.a.size(); k++) {
-                den += coeffs.a[k] * std::pow(z, (double)k);
+            for (size_t k = 0; k < a_coeffs.size(); k++) {
+                den += a_coeffs[k] * std::pow(z, (double)k);
             }
             std::complex<double> H = num/den; //calculating H
 
