@@ -1,6 +1,5 @@
 #include <sciplot/sciplot.hpp>
 namespace sp = sciplot;
-
 void plot2d(const std::vector<double> &y, std::string name){
     sp::Plot2D plot;
     std::vector<double> x_axis;

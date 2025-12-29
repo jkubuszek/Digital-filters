@@ -1,27 +1,24 @@
-cmake_minimum_required(VERSION 3.10)
-
-
-project(DigitalFilters VERSION 1.0 LANGUAGES CXX)
-
+cmake_minimum_required(VERSION 3.12)
+project(DigitalFiltersProject VERSION 1.0)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
-set(CMAKE_EXPORT_COMPILE_COMMANDS ON) 
 
+include_directories(include)
+include_directories(libs)
 
-# if(MSVC)
-#     add_compile_options(/W4)
-# else()
-#     add_compile_options(-Wall -Wextra)
-# endif()
-
-
-add_executable(test src/main.cpp)
-
-target_include_directories(test PRIVATE 
-    ${CMAKE_CURRENT_SOURCE_DIR}/include
-    ${CMAKE_CURRENT_SOURCE_DIR}/libs
+add_library(DigitalFiltersLib
+    src/filter.cpp
+    src/fir.cpp
+    src/iir.cpp
+    src/window.cpp
+    src/hamming.cpp 
+    src/hanning.cpp
+    src/plots.cpp
 )
+
+add_executable(test main.cpp)
+target_link_libraries(test PRIVATE DigitalFiltersLib)
 
 
 if(UNIX)

@@ -1,12 +1,12 @@
 
 #define _USE_MATH_DEFINES
 #include <iostream>
-#include "hamming.h"
-#include "fir.h"
-#include "iir.h"
+#include "hamming.hpp"
+#include "fir.hpp"
+#include "iir.hpp"
 #include "sciplot/sciplot.hpp"
 #include <random>
-#include "plots.h"
+#include "plots.hpp"
 
 
 std::vector<double> noisy_sine(int size, double freq, double amp, double noise_level) {
@@ -54,20 +54,20 @@ int main(){
 
 
     // lowpass, highpass filters and bodeplot showcase
-    int fs = 1000;
-    FIR lowpass;
-    lowpass.design_low_pass(20, 400, fs);
-    Hamming hamming(lowpass.getCoeffs().b.size());
-    plot2d(lowpass.bode(fs).freq, lowpass.bode(fs).mag_db, "lowpass bode without window");
-    lowpass.applyWindow(hamming);
-    plot2d(lowpass.bode(fs).freq, lowpass.bode(fs).mag_db, "lowpass bode with hamming window");
+    // int fs = 1000;
+    // FIR lowpass;
+    // lowpass.design_low_pass(20, 400, fs);
+    // Hamming hamming(lowpass.getCoeffs().b.size());
+    // plot2d(lowpass.bode(fs).freq, lowpass.bode(fs).mag_db, "lowpass bode without window");
+    // lowpass.applyWindow(hamming);
+    // plot2d(lowpass.bode(fs).freq, lowpass.bode(fs).mag_db, "lowpass bode with hamming window");
 
     
-    FIR highpass;
-    highpass.design_high_pass(20, 400, fs);    
-    plot2d(highpass.bode(fs).freq, highpass.bode(fs).mag_db, "highpass bode without window");
-    highpass.applyWindow(hamming);
-    plot2d(highpass.bode(fs).freq, highpass.bode(fs).mag_db, "highpass bode with hamming window");
+    // FIR highpass;
+    // highpass.design_high_pass(20, 400, fs);    
+    // plot2d(highpass.bode(fs).freq, highpass.bode(fs).mag_db, "highpass bode without window");
+    // highpass.applyWindow(hamming);
+    // plot2d(highpass.bode(fs).freq, highpass.bode(fs).mag_db, "highpass bode with hamming window");
     
     return 0;
 }
