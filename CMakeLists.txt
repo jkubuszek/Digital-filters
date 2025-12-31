@@ -18,8 +18,8 @@ add_library(DigitalFiltersLib
 )
 
 add_executable(test main.cpp)
-target_link_libraries(test PRIVATE DigitalFiltersLib)
 
+target_link_libraries(test PRIVATE DigitalFiltersLib)
 
 if(UNIX)
     target_link_libraries(test PRIVATE m)

@@ -1,11 +1,22 @@
 #define _USE_MATH_DEFINES
-#include "hamming.hpp"
+#include "DigitalFilters/hamming.hpp"
 #include <cmath>
 
-Hamming::Hamming(size_t N) : Window("Hamming") { 
-    coeffs.resize(N);
-    for(int i = 0; i < N; i++){
-        coeffs[i] = 0.54-0.46*std::cos(2*M_PI*i/((double)N - 1));
+namespace JK{
+    Hamming::Hamming(size_t N) : Window("Hamming") { 
+        coeffs.resize(N);
+        for(int i = 0; i < N; i++){
+            coeffs[i] = 0.54-0.46*std::cos(2*M_PI*i/((double)N - 1));
+        }
     }
+
+    Hamming::Hamming(const Filter &f) : Window("Hamming") { 
+        size_t N = f.getCoeffs().b.size();
+        coeffs.resize(N);
+        for(int i = 0; i < N; i++){
+            coeffs[i] = 0.54-0.46*std::cos(2*M_PI*i/((double)N - 1));
+        }
+    }
+
+    Hamming::Hamming() : Window(){}
 }
-Hamming::Hamming() : Window(){}
