@@ -22,9 +22,9 @@ namespace JK{
                 b[i] = (std::sin(2.0 * M_PI * n_cutoff_f * n) / (M_PI * n));
             }
         }
-        b_coeffs.resize(b.size());
-        b_coeffs = b;
-        a_coeffs = {1.0};
+        coeffs.b.resize(b.size());
+        coeffs.b = b;
+        coeffs.a = {1.0};
     }
 
     void FIR::design_high_pass(int order, double cutoff_f, double fs){   
@@ -45,9 +45,9 @@ namespace JK{
                     b[i] = (std::sin(-2.0 * M_PI * n_cutoff_f * n) / (M_PI * n));
                 }
             }
-            b_coeffs.resize(b.size());
-            b_coeffs = b;
-            a_coeffs = {1.0};
+            coeffs.b.resize(b.size());
+            coeffs.b = b;
+            coeffs.a = {1.0};
         } else {
             std::cerr << "Error: high pass filter's order must be odd" << std::endl;
             return;
@@ -77,9 +77,9 @@ namespace JK{
     {
         std::cout << "all " << name << " filter coefficients: b" << std::endl;
         std::cout << "[";
-        for (int i = 0; i < b_coeffs.size(); i++)
+        for (int i = 0; i < coeffs.b.size(); i++)
         {
-            std::cout << b_coeffs[i] << ",";
+            std::cout << coeffs.b[i] << ",";
         }
         std::cout << "]" << std::endl;
 
@@ -88,13 +88,13 @@ namespace JK{
 
     FilterCoeffs FIR::getCoeffs() const 
     {
-        return {b_coeffs, {1.0}};
+        return {coeffs.b, {1.0}};
     }
 
     void FIR::setCoeffs(const std::vector<double> &b, const std::vector<double> &a) 
     {
-        b_coeffs = b;
-        a_coeffs = {1.0};
+        coeffs.b = b;
+        coeffs.a = {1.0};
     }
 
     std::vector<double> FIR::response(const std::vector<double> &x, const int y_len) 
@@ -112,11 +112,11 @@ namespace JK{
         for (int n = 0; n < y_length; n++)
         { // calculating the response
             double res = 0.0;
-            for (int m = 0; m < b_coeffs.size(); m++)
+            for (int m = 0; m < coeffs.b.size(); m++)
             {
                 if ((0 <= (n - m)) && ((n - m) < x.size()))
                 {
-                    res += b_coeffs[m] * x[n - m];
+                    res += coeffs.b[m] * x[n - m];
                 }
             }
             y[n] = res;

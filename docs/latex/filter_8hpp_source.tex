@@ -1,0 +1,58 @@
+\doxysection{filter.\+hpp}
+\hypertarget{filter_8hpp_source}{}\label{filter_8hpp_source}\index{/media/jakub/Windows-\/SSD/Users/kubak/projekty\_git/Digital-\/filters/include/DigitalFilters/filter.hpp@{/media/jakub/Windows-\/SSD/Users/kubak/projekty\_git/Digital-\/filters/include/DigitalFilters/filter.hpp}}
+\mbox{\hyperlink{filter_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#define\ \_USE\_MATH\_DEFINES}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <complex>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{window_8hpp}{window.hpp}}"{}}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{namespace\ }JK\{}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structJK_1_1FilterCoeffs}{FilterCoeffs}}\{}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ std::vector<double>\ b;\ }
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ std::vector<double>\ \mbox{\hyperlink{structJK_1_1FilterCoeffs_a1975299d25ec07abb58cae8390cbcd67}{a}};\ }
+\DoxyCodeLine{00019\ \ \ \ \ \};}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structJK_1_1BodeData}{BodeData}}\{}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ std::vector<double>\ freq;\ }
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ std::vector<double>\ \mbox{\hyperlink{structJK_1_1BodeData_aaf8d5f1c2285d7b1168689721a5e80a1}{mag\_db}};\ }
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ std::vector<double>\ \mbox{\hyperlink{structJK_1_1BodeData_a4515d04e2fcb7273d8b80a4bc75bd9c2}{phase\_deg}};\ \textcolor{comment}{//\ phase\ in\ degrees\ corresponding\ to\ each\ element\ from\ freq\ vector}}
+\DoxyCodeLine{00025\ \ \ \ \ \};}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classJK_1_1Filter}{Filter}}\{\ \ \ \ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{classJK_1_1Filter_afd069f89dd49030dd7b132ac89f054d7}{name}};}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structJK_1_1FilterCoeffs}{FilterCoeffs}}\ \mbox{\hyperlink{classJK_1_1Filter_a88a1cfdd489a2667e1ccde80aff7a650}{coeffs}};\ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classJK_1_1Filter_ac2c15da3aefce3a7bb27da9c120c9e6c}{Filter}}(std::string\ n,\ \textcolor{keyword}{const}\ std::vector<double>\ \&b,\ \ \textcolor{keyword}{const}\ std::vector<double>\ \&a);}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classJK_1_1Filter_ac2c15da3aefce3a7bb27da9c120c9e6c}{Filter}}();}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classJK_1_1Filter_a343770f558e95bb8aa9e714e647539b3}{\string~Filter}}();}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{structJK_1_1FilterCoeffs}{FilterCoeffs}}\ \mbox{\hyperlink{classJK_1_1Filter_a4f9cd07bfb714d53678133dc12a022dc}{getCoeffs}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classJK_1_1Filter_af136454d80fdb4bfd96d6dad5bac20bd}{printCoeffs}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ std::vector<double>\ \mbox{\hyperlink{classJK_1_1Filter_a767bd725204937c5a67ea2a23a09b17e}{response}}(\textcolor{keyword}{const}\ std::vector<double>\ \&x,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ y\_len\ =\ -\/1)\ =\ 0;}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classJK_1_1Filter_a9731542bdfcdf69989b7e972feb5e2fa}{responsePlot}}(\textcolor{keyword}{const}\ std::vector<double>\ \&x,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ y\_len\ =\ -\/1);}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classJK_1_1Filter_a7887845277e7f54c4ebc842273d4a346}{applyWindow}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classJK_1_1Window}{Window}}\ \&win);}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structJK_1_1BodeData}{BodeData}}\ \mbox{\hyperlink{classJK_1_1Filter_a9587f97d2e16a42a759a780cff2f6935}{bode}}(\textcolor{keywordtype}{double}\ fs,\ \textcolor{keywordtype}{int}\ plot\_points\ =\ 200)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classJK_1_1Filter_a5cb12a95f3ef0cb9950af9cc8f2c491d}{bodePlot}}(\textcolor{keywordtype}{double}\ fs,\ \textcolor{keywordtype}{int}\ plot\_points\ =\ 200)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classJK_1_1Filter_a237b3e0bb005db0882ea7b43049c2a9f}{setCoeffs}}(\textcolor{keyword}{const}\ std::vector<double>\ \&b,\ \textcolor{keyword}{const}\ std::vector<double>\ \&a)\ \ =\ 0;}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{classJK_1_1Filter_ab2cf31afd4b0600ac9cc723758595f52}{getName}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classJK_1_1Filter_a46372f8f78938476dbd59f115e7c589a}{setName}}(std::string\ n);}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classJK_1_1Filter_aea8279fe609db775fa0e7b169c762d18}{printName}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00094\ \ \ \ \ \};}
+\DoxyCodeLine{00095\ \}}
+
+\end{DoxyCode}

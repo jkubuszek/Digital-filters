@@ -6,10 +6,10 @@
 #include "DigitalFilters/plots.hpp"
 
 namespace JK{
-    Filter::Filter(std::string n, const std::vector<double> &b, const std::vector<double> &a) : name(n), b_coeffs(b), a_coeffs(a) {}
+    Filter::Filter(std::string n, const std::vector<double> &b, const std::vector<double> &a) : name(n), coeffs{b,a} {}
     Filter::Filter(){
-        b_coeffs = {0.0};
-        a_coeffs = {1.0};
+        coeffs.b = {0.0};
+        coeffs.a = {1.0};
         name = "";
     }
 
@@ -20,19 +20,19 @@ namespace JK{
     }
 
     void Filter::applyWindow(const Window &win){
-        if (b_coeffs.size() <= 1){
+        if (coeffs.b.size() <= 1){
             std::cerr << "Error: cannot apply windows to a filter of size equal or less than 1" << std::endl;
         }
         else {
-            if (win.size() != b_coeffs.size())
+            if (win.size() != coeffs.b.size())
             {
                 std::cerr << "Error: coeffs_b and window size do not match in applyWindow()" << std::endl;
                 return;
             }
             else {
                 const auto &w = win.getCoeffs();
-                for (int n = 0; n < b_coeffs.size(); n++){
-                    b_coeffs[n] *= w[n];
+                for (int n = 0; n < coeffs.b.size(); n++){
+                    coeffs.b[n] *= w[n];
                 }
                 return;
             }
@@ -48,13 +48,13 @@ namespace JK{
             std::complex<double> z = std::polar(1.0, -omega);
 
             std::complex<double> num(0.0, 0.0); // transmitance numerator
-            for (size_t k = 0; k < b_coeffs.size(); k++){
-                num += b_coeffs[k] * std::pow(z, (double)k);
+            for (size_t k = 0; k < coeffs.b.size(); k++){
+                num += coeffs.b[k] * std::pow(z, (double)k);
             }
 
             std::complex<double> den(0.0, 0.0); // transmitance denumerator
-            for (size_t k = 0; k < a_coeffs.size(); k++){
-                den += a_coeffs[k] * std::pow(z, (double)k);
+            for (size_t k = 0; k < coeffs.a.size(); k++){
+                den += coeffs.a[k] * std::pow(z, (double)k);
             }
             std::complex<double> H = num / den; // calculating H
 

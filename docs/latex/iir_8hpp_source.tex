@@ -1,0 +1,26 @@
+\doxysection{iir.\+hpp}
+\hypertarget{iir_8hpp_source}{}\label{iir_8hpp_source}\index{/media/jakub/Windows-\/SSD/Users/kubak/projekty\_git/Digital-\/filters/include/DigitalFilters/iir.hpp@{/media/jakub/Windows-\/SSD/Users/kubak/projekty\_git/Digital-\/filters/include/DigitalFilters/iir.hpp}}
+\mbox{\hyperlink{iir_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{filter_8hpp}{filter.hpp}}"{}}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{namespace\ }JK\{}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classJK_1_1IIR}{IIR}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classJK_1_1Filter}{Filter}}\{}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classJK_1_1IIR_aa176356aae6a210f8c6e87775b681772}{IIR}}(\textcolor{keyword}{const}\ std::vector<double>\ \&b,\ \textcolor{keyword}{const}\ std::vector<double>\ \&a);}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classJK_1_1IIR_aa176356aae6a210f8c6e87775b681772}{IIR}}();}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classJK_1_1IIR_a20befcebaa355ccb681ea0c3fb73e6e2}{printCoeffs}}()\ \textcolor{keyword}{const\ override};\ \ \ }
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structJK_1_1FilterCoeffs}{FilterCoeffs}}\ \mbox{\hyperlink{classJK_1_1IIR_a2e8cf8a42c75d46fcd2638945d049d33}{getCoeffs}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ std::vector<double>\ \mbox{\hyperlink{classJK_1_1IIR_afea17d69320b5468908690f96a579aef}{response}}(\textcolor{keyword}{const}\ std::vector<double>\ \&x,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ y\_len\ =\ -\/1)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classJK_1_1IIR_a29933d20cd7a6e4ef4d43813fbe5761b}{setCoeffs}}(\textcolor{keyword}{const}\ std::vector<double>\ \&b,\ \textcolor{keyword}{const}\ std::vector<double>\ \&a)\textcolor{keyword}{override};}
+\DoxyCodeLine{00039\ \ \ \ \ \};}
+\DoxyCodeLine{00040\ \}}
+
+\end{DoxyCode}

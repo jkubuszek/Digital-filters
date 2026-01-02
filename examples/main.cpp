@@ -1,12 +1,12 @@
 
 #define _USE_MATH_DEFINES
 #include <iostream>
-#include "hamming.hpp"
-#include "fir.hpp"
-#include "iir.hpp"
+#include "DigitalFilters/hamming.hpp"
+#include "DigitalFilters/fir.hpp"
+#include "DigitalFilters/iir.hpp"
 #include "sciplot/sciplot.hpp"
 #include <random>
-#include "plots.hpp"
+#include "DigitalFilters/plots.hpp"
 
 
 std::vector<double> noisy_sine(int size, double freq, double amp, double noise_level) {
@@ -51,10 +51,5 @@ int main(){
     highpass.bodePlot(fs);
     lowpass.bodePlot(fs);
 
-
-
-    
-
-    
     return 0;
 }

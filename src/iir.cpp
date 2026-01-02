@@ -3,8 +3,8 @@
 
 namespace JK{
     IIR::IIR(const std::vector<double> &b, const std::vector<double> &a) : Filter("IIR", b, a){
-        if(a_coeffs.empty() || a_coeffs[0] == 0.0) {
-            a_coeffs = {1.0};
+        if(coeffs.a.empty() || coeffs.a[0] == 0.0) {
+            coeffs.a = {1.0};
         }
     }
     IIR::IIR() : Filter(){}
@@ -12,21 +12,21 @@ namespace JK{
     void IIR::printCoeffs() const{
         std::cout << "all " << name << " filter coefficients: b" << std::endl;
         std::cout << "["; 
-        for(int i = 0; i < b_coeffs.size(); i++){
-            std::cout << b_coeffs[i] << ",";
+        for(int i = 0; i < coeffs.b.size(); i++){
+            std::cout << coeffs.b[i] << ",";
         }
         std::cout << "]" << std::endl;   
 
         std::cout << "all " << name << " filter coefficients: a" << std::endl;
         std::cout << "["; 
-        for(int i = 0; i < a_coeffs.size(); i++){
-            std::cout << a_coeffs[i] << ",";
+        for(int i = 0; i < coeffs.a.size(); i++){
+            std::cout << coeffs.a[i] << ",";
         }
         std::cout << "]" << std::endl;   
     }
 
     FilterCoeffs IIR::getCoeffs() const{
-        return {b_coeffs, a_coeffs};
+        return {coeffs.b, coeffs.a};
     }
 
     std::vector<double> IIR::response(const std::vector<double> &x, const int y_len){
@@ -36,19 +36,19 @@ namespace JK{
             } else {
                 y_size = x.size();
             }
-            double a0 = a_coeffs[0];
+            double a0 = coeffs.a[0];
             std::vector<double> y(y_size, 0.0);
             for(int n = 0; n < x.size(); n++){
                 double sum_b = 0.0;
                 double sum_a = 0.0;
-                for(int m = 0; m < b_coeffs.size(); m++){
+                for(int m = 0; m < coeffs.b.size(); m++){
                     if((0 <= (n-m)) && ((n-m) < x.size())){
-                        sum_b += b_coeffs[m]*x[n-m];
+                        sum_b += coeffs.b[m]*x[n-m];
                     }
                 }
-                for(int k = 1; k < a_coeffs.size(); k++){
+                for(int k = 1; k < coeffs.a.size(); k++){
                     if((0 <= (n-k)) && ((n-k) < y.size())){
-                        sum_a += a_coeffs[k]*y[n-k];
+                        sum_a += coeffs.a[k]*y[n-k];
                     }
                 }
                 y[n] = (sum_b - sum_a)/a0;
@@ -57,7 +57,7 @@ namespace JK{
         }
         
     void IIR::setCoeffs(const std::vector<double> &b, const std::vector<double> &a){
-        b_coeffs = b;
-        a_coeffs = a;
+        coeffs.b = b;
+        coeffs.a = a;
     }
 }
