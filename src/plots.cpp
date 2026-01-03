@@ -1,4 +1,5 @@
 #include <sciplot/sciplot.hpp>
+#include <stdexcept>
 namespace JK{
     namespace sp = sciplot;
     void plot2d(const std::vector<double> &y, std::string name){
@@ -16,6 +17,9 @@ namespace JK{
     }
 
     void plot2d(const std::vector<double> &x, const std::vector<double> &y, std::string name){
+        if (x.size() != y.size()) {
+            throw std::invalid_argument("Error: X and Y vectors for plotting must have the same length.");
+        }
         sp::Plot2D plot;
         std::valarray<double> vx(x.data(), x.size());
         std::valarray<double> vy(y.data(), y.size());

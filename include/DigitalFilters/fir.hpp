@@ -41,12 +41,13 @@ namespace JK{
         /// @param fs sampling frequency
         FIR(FilterType type, int order, double cutoff_f, double fs);
 
-        /// @brief method for printing coefficients in terminal, for testing purposes
-        void printCoeffs() const override;
-
         /// @brief getter for filter coefficients
         /// @return returns a structure holding both feedforward and feedback coefficients
         FilterCoeffs getCoeffs() const override;
+
+        /// @brief helper method for overloaded << operator
+        /// @param os output stream
+        void print(std::ostream& os) const override;
 
         /// @brief setter for filter's coefficients
         /// @param b feedforward coefficients

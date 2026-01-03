@@ -8,14 +8,24 @@ namespace JK{
         coeffs = {0.0};
     }
 
-    void Window::printCoeffs() const{
-        std::cout << "all " << name << " window coefficients:" << std::endl;
-        std::cout << "["; 
-        for(int i = 0; i < coeffs.size(); i++){
-            std::cout << coeffs[i] << ",";
-        }
-        std::cout << "]" << std::endl;   
+    bool Window::operator==(const Window& other) const {
+        return this->coeffs == other.coeffs; 
     }
+
+    bool Window::operator!=(const Window& other) const {
+        return this->coeffs != other.coeffs; 
+    }
+
+    std::ostream& operator<<(std::ostream& os, const Window& w) {
+        os << "Window Name: " << w.name << "\n";
+        os << "Coefficients: [";
+        for (size_t i = 0; i < w.coeffs.size(); i++) {
+            os << w.coeffs[i] << (i < w.coeffs.size() - 1 ? ", " : "");
+        }
+        os << "]";
+        return os;
+    }
+
 
     std::vector<double> Window::getCoeffs() const{
         return coeffs;

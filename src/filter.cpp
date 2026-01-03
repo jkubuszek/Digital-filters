@@ -4,6 +4,7 @@
 #include <cmath>
 #include "DigitalFilters/window.hpp"
 #include "DigitalFilters/plots.hpp"
+#include <stdexcept>
 
 namespace JK{
     Filter::Filter(std::string n, const std::vector<double> &b, const std::vector<double> &a) : name(n), coeffs{b,a} {}
@@ -13,6 +14,18 @@ namespace JK{
         name = "";
     }
 
+    bool Filter::operator==(const Filter& other) const {
+        return this->coeffs == other.coeffs; 
+    }
+
+    bool Filter::operator!=(const Filter& other) const {
+        return this->coeffs != other.coeffs; 
+    }
+    std::ostream& operator<<(std::ostream& os, const Filter& f) {
+        f.print(os); 
+        return os;
+    }
+
     void Filter::responsePlot(const std::vector<double> &x, const int y_len){
         std::vector<double> resp = response(x, y_len);
         plot2d(x, name + " response plot");
@@ -20,14 +33,12 @@ namespace JK{
     }
 
     void Filter::applyWindow(const Window &win){
-        if (coeffs.b.size() <= 1){
-            std::cerr << "Error: cannot apply windows to a filter of size equal or less than 1" << std::endl;
+        if(coeffs.b.size() <= 1){
+            throw std::length_error("Error: Cannot apply window to a filter of size <= 1.");
         }
         else {
-            if (win.size() != coeffs.b.size())
-            {
-                std::cerr << "Error: coeffs_b and window size do not match in applyWindow()" << std::endl;
-                return;
+            if(win.size() != coeffs.b.size()){
+                throw std::invalid_argument("Error: Filter coefficients and window size do not match.");
             }
             else {
                 const auto &w = win.getCoeffs();
@@ -86,8 +97,5 @@ namespace JK{
         name = n;
     }
 
-    void Filter::printName() const{
-        std::cout << "filter name: " << name << std::endl;
-    }
     Filter::~Filter(){}
 }

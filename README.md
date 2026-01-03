@@ -54,6 +54,7 @@ The project uses CMake. To build the library follow these steps:
 * `src/` - library source files
 * `examples/` - use examples
 * `libs/` - external libraries (sciplot)
+* `docs/` - doxygen documentation 
 
 ## Licence
 

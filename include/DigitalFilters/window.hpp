@@ -18,6 +18,16 @@ namespace JK{
         std::string name = "";
         
     public:
+        /// @brief overloaded == operator for comparing windows coefficients sets
+        /// @param other other Window Class object
+        /// @return returns 1 if window coeficients sets are the same, 0 if they are different
+        bool operator==(const Window& other) const;
+
+        /// @brief overloaded != operator for comparing windows coefficients sets
+        /// @param other other Window Class object
+        /// @return returns 0 if window coeficients sets are the same, 1 if they are different
+        bool operator!=(const Window& other) const;
+
         /// @brief constructor supporting custom name
         /// @param n name 
         Window(std:: string n);
@@ -25,8 +35,11 @@ namespace JK{
         /// @brief default constructor
         Window();
 
-        /// @brief method for printing window's coefficients in terminal, for testing purposes
-        void printCoeffs() const;
+        /// @brief overloaded << operator for printing all coefficients into output stream
+        /// @param os output stream
+        /// @param w Window class object
+        /// @return returns the output stream
+        friend std::ostream& operator<<(std::ostream& os, const Window& w);
         
         /// @brief getter for window coefficients
         /// @return returns a vector containing windiw coefficients

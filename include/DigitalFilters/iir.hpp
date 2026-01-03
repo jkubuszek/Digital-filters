@@ -19,8 +19,9 @@ namespace JK{
         /// @brief default constructor
         IIR();
         
-        /// @brief method for printing coefficients in terminal, for testing purposes
-        void printCoeffs() const override;   
+        /// @brief helper method for overloaded << operator
+        /// @param os output stream
+        void print(std::ostream& os) const override;  
         
         /// @brief getter for filter coefficients
         /// @return returns a structure holding both feedforward and feedback coefficients

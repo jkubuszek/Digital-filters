@@ -14,8 +14,23 @@
 namespace JK{
     /// @brief a structure for holding  both feedback (a) and feedforward (b) coefficients
     struct FilterCoeffs{
+
         std::vector<double> b; /// feedfoward coefficients
         std::vector<double> a; /// feedback coefficients, equals [1.0] for fir
+        
+        /// @brief overloaded == operator for comparing filter coefficients sets
+        /// @param other other FilterCoeffs structure
+        /// @return returns 1 if coeficients sets are the same, 0 if they are different
+        bool operator==(const FilterCoeffs& other) const {
+            return b == other.b && a == other.a;
+        }
+
+        /// @brief overloaded != operator for comparing filter coefficients sets
+        /// @param other other FilterCoeffs structure
+        /// @return returns 0 if coeficients sets are the same, 1 if they are different
+        bool operator!=(const FilterCoeffs& other) const {
+            return b != other.b || a != other.a;
+        }
     };
     /// @brief a structure for holding  all the parameters needed for Bode plots
     struct BodeData{
@@ -26,11 +41,33 @@ namespace JK{
     /// @brief Filter class representing a digital filter
     class Filter{    
     protected:
+        /// @brief helper method for overloaded << operator
+        /// @param os output stream
+        virtual void print(std::ostream& os) const = 0;
+
         /// @brief filter' name
         std::string name;
+
         /// @brief structure holding filter's coefficients
         FilterCoeffs coeffs; 
     public:
+
+        /// @brief overloaded == operator for comparing filter type and their coefficients sets
+        /// @param other other Filter Class object
+        /// @return returns 1 if filters coeficients sets are the same, 0 if they are different
+        bool operator==(const Filter& other) const;
+        
+        /// @brief overloaded != operator for comparing filter type and their coefficients sets
+        /// @param other other Filter Class object
+        /// @return returns 0 if filters coeficients sets are the same, 1 if they are different
+        bool operator!=(const Filter& other) const;
+        
+        /// @brief overloaded << operator for printing all the coefficients into ouput stream
+        /// @param os ouput stream
+        /// @param f Filter Class object
+        /// @return returns the output stream
+        friend std::ostream& operator<<(std::ostream& os, const Filter& f);
+
         /// @brief class constructor supporting custom coefficients
         /// @param n name of the filter
         /// @param b feedforward coefficients
@@ -42,13 +79,12 @@ namespace JK{
         
         /// @brief virtual destructor, for memory safety when using polymorphism
         virtual ~Filter();
+
+       
         
         /// @brief getter for filter coefficients
         /// @return returns a structure holding both feedforward and feedback coefficients
         virtual FilterCoeffs getCoeffs() const = 0;
-
-        /// @brief method for printing coefficients in terminal, for testing purposes
-        virtual void printCoeffs() const = 0;
 
         /// @brief method for calculating filter's response to a given signal
         /// @param x vector containing signal samples
@@ -88,8 +124,5 @@ namespace JK{
         /// @brief setter for filter's name
         /// @param n name
         void setName(std::string n);
-        
-        /// @brief method for printing the name, for testing purposes
-        void printName() const;
     };
 }

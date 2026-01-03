@@ -9,20 +9,20 @@ namespace JK{
     }
     IIR::IIR() : Filter(){}
 
-    void IIR::printCoeffs() const{
-        std::cout << "all " << name << " filter coefficients: b" << std::endl;
-        std::cout << "["; 
-        for(int i = 0; i < coeffs.b.size(); i++){
-            std::cout << coeffs.b[i] << ",";
+    void IIR::print(std::ostream& os) const {
+        os << "Filter Name: " << name << "\n";
+        os << "Type: IIR (Infinite Impulse Response)\n";
+        
+        os << "Feedforward coefficients b: [";
+        for (size_t i = 0; i < coeffs.b.size(); i++) {
+            os << coeffs.b[i] << (i < coeffs.b.size() - 1 ? ", " : "");
         }
-        std::cout << "]" << std::endl;   
-
-        std::cout << "all " << name << " filter coefficients: a" << std::endl;
-        std::cout << "["; 
-        for(int i = 0; i < coeffs.a.size(); i++){
-            std::cout << coeffs.a[i] << ",";
+        os << "]\n";
+        os << "Feedback coefficients a: [";
+        for (size_t i = 0; i < coeffs.a.size(); i++) {
+            os << coeffs.a[i] << (i < coeffs.a.size() - 1 ? ", " : "");
         }
-        std::cout << "]" << std::endl;   
+        os << "]";
     }
 
     FilterCoeffs IIR::getCoeffs() const{
@@ -58,6 +58,10 @@ namespace JK{
         
     void IIR::setCoeffs(const std::vector<double> &b, const std::vector<double> &a){
         coeffs.b = b;
-        coeffs.a = a;
+        if(coeffs.a.empty() || coeffs.a[0] == 0.0) {
+            coeffs.a = {1.0};
+        } else {
+            coeffs.a = a;
+        }
     }
 }
