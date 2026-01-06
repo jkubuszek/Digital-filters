@@ -1,0 +1,7 @@
+<map id="include/DigitalFilters/plots.hpp" name="include/DigitalFilters/plots.hpp">
+<area shape="rect" id="Node000001" title="This file contains plotting functions that use sciplot library to generate pdfs with plots." alt="" coords="5,5,145,45"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="6,93,65,119"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="68,47,50,82,45,80,63,44"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="89,93,144,119"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="88,44,106,80,102,82,83,47"/>
+</map>

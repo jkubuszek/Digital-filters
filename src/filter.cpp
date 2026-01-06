@@ -28,7 +28,7 @@ namespace JK{
 
     void Filter::responsePlot(const std::vector<double> &x, const int y_len){
         std::vector<double> resp = response(x, y_len);
-        plot2d(x, name + " response plot");
+        plot2d(resp, name + " response plot");
 
     }
 
@@ -58,12 +58,12 @@ namespace JK{
 
             std::complex<double> z = std::polar(1.0, -omega);
 
-            std::complex<double> num(0.0, 0.0); // transmitance numerator
+            std::complex<double> num(0.0, 0.0); // transfer function numerator
             for (size_t k = 0; k < coeffs.b.size(); k++){
                 num += coeffs.b[k] * std::pow(z, (double)k);
             }
 
-            std::complex<double> den(0.0, 0.0); // transmitance denumerator
+            std::complex<double> den(0.0, 0.0); // transfer function denumerator
             for (size_t k = 0; k < coeffs.a.size(); k++){
                 den += coeffs.a[k] * std::pow(z, (double)k);
             }

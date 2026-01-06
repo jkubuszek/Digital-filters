@@ -89,11 +89,23 @@ $(function() {
 Inheritance diagram for JK::IIR:</div>
 <div class="dyncontent">
 <div class="center"><img src="classJK_1_1IIR__inherit__graph.png" border="0" usemap="#aJK_1_1IIR_inherit__map" alt="Inheritance graph"/></div>
+<map name="aJK_1_1IIR_inherit__map" id="aJK_1_1IIR_inherit__map">
+<area shape="rect" title="IIR class, IIR is a Infinite Impulse Response filter." alt="" coords="11,79,75,104"/>
+<area shape="rect" href="classJK_1_1Filter.html" title="Filter class representing a digital filter." alt="" coords="5,5,80,31"/>
+<area shape="poly" title=" " alt="" coords="45,44,45,79,40,79,40,44"/>
+</map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
 Collaboration diagram for JK::IIR:</div>
 <div class="dyncontent">
 <div class="center"><img src="classJK_1_1IIR__coll__graph.png" border="0" usemap="#aJK_1_1IIR_coll__map" alt="Collaboration graph"/></div>
+<map name="aJK_1_1IIR_coll__map" id="aJK_1_1IIR_coll__map">
+<area shape="rect" title="IIR class, IIR is a Infinite Impulse Response filter." alt="" coords="31,168,95,193"/>
+<area shape="rect" href="classJK_1_1Filter.html" title="Filter class representing a digital filter." alt="" coords="25,93,100,119"/>
+<area shape="poly" title=" " alt="" coords="65,133,65,168,60,168,60,133"/>
+<area shape="rect" href="structJK_1_1FilterCoeffs.html" title="a structure for holding both feedback (a) and feedforward (b) coefficients" alt="" coords="5,5,120,31"/>
+<area shape="poly" title=" " alt="" coords="65,45,65,93,60,93,60,45"/>
+</map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
@@ -105,9 +117,9 @@ Public Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><b>IIR</b> ()</td></tr>
 <tr class="memdesc:aa176356aae6a210f8c6e87775b681772"><td class="mdescLeft">&#160;</td><td class="mdescRight">default constructor <br /></td></tr>
 <tr class="separator:aa176356aae6a210f8c6e87775b681772"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a20befcebaa355ccb681ea0c3fb73e6e2" id="r_a20befcebaa355ccb681ea0c3fb73e6e2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classJK_1_1IIR.html#a20befcebaa355ccb681ea0c3fb73e6e2">printCoeffs</a> () const override</td></tr>
-<tr class="memdesc:a20befcebaa355ccb681ea0c3fb73e6e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">method for printing coefficients in terminal, for testing purposes  <br /></td></tr>
-<tr class="separator:a20befcebaa355ccb681ea0c3fb73e6e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c2b405a9fd4deedc0155ed9d4255271" id="r_a4c2b405a9fd4deedc0155ed9d4255271"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classJK_1_1IIR.html#a4c2b405a9fd4deedc0155ed9d4255271">print</a> (std::ostream &amp;os) const override</td></tr>
+<tr class="memdesc:a4c2b405a9fd4deedc0155ed9d4255271"><td class="mdescLeft">&#160;</td><td class="mdescRight">helper method for overloaded &lt;&lt; operator  <br /></td></tr>
+<tr class="separator:a4c2b405a9fd4deedc0155ed9d4255271"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2e8cf8a42c75d46fcd2638945d049d33" id="r_a2e8cf8a42c75d46fcd2638945d049d33"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structJK_1_1FilterCoeffs.html">FilterCoeffs</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classJK_1_1IIR.html#a2e8cf8a42c75d46fcd2638945d049d33">getCoeffs</a> () const override</td></tr>
 <tr class="memdesc:a2e8cf8a42c75d46fcd2638945d049d33"><td class="mdescLeft">&#160;</td><td class="mdescRight">getter for filter coefficients  <br /></td></tr>
 <tr class="separator:a2e8cf8a42c75d46fcd2638945d049d33"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -118,6 +130,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a29933d20cd7a6e4ef4d43813fbe5761b"><td class="mdescLeft">&#160;</td><td class="mdescRight">setter for filter's coefficients  <br /></td></tr>
 <tr class="separator:a29933d20cd7a6e4ef4d43813fbe5761b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classJK_1_1Filter"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classJK_1_1Filter')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classJK_1_1Filter.html">JK::Filter</a></td></tr>
+<tr class="memitem:a8ea0d12385570c0216aec94bfc236d21 inherit pub_methods_classJK_1_1Filter" id="r_a8ea0d12385570c0216aec94bfc236d21"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classJK_1_1Filter.html#a8ea0d12385570c0216aec94bfc236d21">operator==</a> (const <a class="el" href="classJK_1_1Filter.html">Filter</a> &amp;other) const</td></tr>
+<tr class="memdesc:a8ea0d12385570c0216aec94bfc236d21 inherit pub_methods_classJK_1_1Filter"><td class="mdescLeft">&#160;</td><td class="mdescRight">overloaded == operator for comparing filter type and their coefficients sets  <br /></td></tr>
+<tr class="separator:a8ea0d12385570c0216aec94bfc236d21 inherit pub_methods_classJK_1_1Filter"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f84bc73fa37aa01aa86609553a33cc3 inherit pub_methods_classJK_1_1Filter" id="r_a2f84bc73fa37aa01aa86609553a33cc3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classJK_1_1Filter.html#a2f84bc73fa37aa01aa86609553a33cc3">operator!=</a> (const <a class="el" href="classJK_1_1Filter.html">Filter</a> &amp;other) const</td></tr>
+<tr class="memdesc:a2f84bc73fa37aa01aa86609553a33cc3 inherit pub_methods_classJK_1_1Filter"><td class="mdescLeft">&#160;</td><td class="mdescRight">overloaded != operator for comparing filter type and their coefficients sets  <br /></td></tr>
+<tr class="separator:a2f84bc73fa37aa01aa86609553a33cc3 inherit pub_methods_classJK_1_1Filter"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a707f455340c8eecc7cf376eba36b4c69 inherit pub_methods_classJK_1_1Filter" id="r_a707f455340c8eecc7cf376eba36b4c69"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classJK_1_1Filter.html#a707f455340c8eecc7cf376eba36b4c69">Filter</a> (std::string n, const std::vector&lt; double &gt; &amp;b, const std::vector&lt; double &gt; &amp;a)</td></tr>
 <tr class="memdesc:a707f455340c8eecc7cf376eba36b4c69 inherit pub_methods_classJK_1_1Filter"><td class="mdescLeft">&#160;</td><td class="mdescRight">class constructor supporting custom coefficients  <br /></td></tr>
 <tr class="separator:a707f455340c8eecc7cf376eba36b4c69 inherit pub_methods_classJK_1_1Filter"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -147,10 +165,6 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~Filter</b> ()</td
 <tr class="memitem:a46372f8f78938476dbd59f115e7c589a inherit pub_methods_classJK_1_1Filter" id="r_a46372f8f78938476dbd59f115e7c589a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classJK_1_1Filter.html#a46372f8f78938476dbd59f115e7c589a">setName</a> (std::string n)</td></tr>
 <tr class="memdesc:a46372f8f78938476dbd59f115e7c589a inherit pub_methods_classJK_1_1Filter"><td class="mdescLeft">&#160;</td><td class="mdescRight">setter for filter's name  <br /></td></tr>
 <tr class="separator:a46372f8f78938476dbd59f115e7c589a inherit pub_methods_classJK_1_1Filter"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aea8279fe609db775fa0e7b169c762d18 inherit pub_methods_classJK_1_1Filter" id="r_aea8279fe609db775fa0e7b169c762d18"><td class="memItemLeft" align="right" valign="top">
-void&#160;</td><td class="memItemRight" valign="bottom"><b>printName</b> () const</td></tr>
-<tr class="memdesc:aea8279fe609db775fa0e7b169c762d18 inherit pub_methods_classJK_1_1Filter"><td class="mdescLeft">&#160;</td><td class="mdescRight">method for printing the name, for testing purposes <br /></td></tr>
-<tr class="separator:aea8279fe609db775fa0e7b169c762d18 inherit pub_methods_classJK_1_1Filter"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -235,8 +249,8 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>name</b></td><
 
 </div>
 </div>
-<a id="a20befcebaa355ccb681ea0c3fb73e6e2" name="a20befcebaa355ccb681ea0c3fb73e6e2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a20befcebaa355ccb681ea0c3fb73e6e2">&#9670;&#160;</a></span>printCoeffs()</h2>
+<a id="a4c2b405a9fd4deedc0155ed9d4255271" name="a4c2b405a9fd4deedc0155ed9d4255271"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c2b405a9fd4deedc0155ed9d4255271">&#9670;&#160;</a></span>print()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -245,9 +259,10 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>name</b></td><
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void JK::IIR::printCoeffs </td>
+          <td class="memname">void JK::IIR::print </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>os</em></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -258,9 +273,15 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>name</b></td><
 </table>
 </div><div class="memdoc">
 
-<p>method for printing coefficients in terminal, for testing purposes </p>
+<p>helper method for overloaded &lt;&lt; operator </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">os</td><td>output stream </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p>Implements <a class="el" href="classJK_1_1Filter.html#af136454d80fdb4bfd96d6dad5bac20bd">JK::Filter</a>.</p>
+<p>Implements <a class="el" href="classJK_1_1Filter.html#a63b1d2bc58d321617748a621b49ec001">JK::Filter</a>.</p>
 
 </div>
 </div>
@@ -360,8 +381,8 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>name</b></td><
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>/media/jakub/Windows-SSD/Users/kubak/projekty_git/Digital-filters/include/DigitalFilters/<a class="el" href="iir_8hpp_source.html">iir.hpp</a></li>
-<li>/media/jakub/Windows-SSD/Users/kubak/projekty_git/Digital-filters/src/<b>iir.cpp</b></li>
+<li>include/DigitalFilters/<a class="el" href="iir_8hpp_source.html">iir.hpp</a></li>
+<li>src/<b>iir.cpp</b></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

@@ -77,6 +77,7 @@ $(function() {
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
+<a href="#friends">Friends</a> &#124;
 <a href="classJK_1_1Window-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">JK::Window Class Reference</div></div>
 </div><!--header-->
@@ -90,10 +91,23 @@ $(function() {
 Inheritance diagram for JK::Window:</div>
 <div class="dyncontent">
 <div class="center"><img src="classJK_1_1Window__inherit__graph.png" border="0" usemap="#aJK_1_1Window_inherit__map" alt="Inheritance graph"/></div>
+<map name="aJK_1_1Window_inherit__map" id="aJK_1_1Window_inherit__map">
+<area shape="rect" title="Window class." alt="" coords="71,5,165,31"/>
+<area shape="rect" href="classJK_1_1Hamming.html" title="Hamming window class." alt="" coords="5,79,108,104"/>
+<area shape="poly" title=" " alt="" coords="101,43,69,80,65,77,97,40"/>
+<area shape="rect" href="classJK_1_1Hanning.html" title="Hanning window class." alt="" coords="132,79,227,104"/>
+<area shape="poly" title=" " alt="" coords="139,40,171,77,167,80,135,43"/>
+</map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:afe2ac2f2da0d3d86e2f45fa9c5f48e58" id="r_afe2ac2f2da0d3d86e2f45fa9c5f48e58"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classJK_1_1Window.html#afe2ac2f2da0d3d86e2f45fa9c5f48e58">operator==</a> (const <a class="el" href="classJK_1_1Window.html">Window</a> &amp;other) const</td></tr>
+<tr class="memdesc:afe2ac2f2da0d3d86e2f45fa9c5f48e58"><td class="mdescLeft">&#160;</td><td class="mdescRight">overloaded == operator for comparing windows coefficients sets  <br /></td></tr>
+<tr class="separator:afe2ac2f2da0d3d86e2f45fa9c5f48e58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9b776e40324d6e53ee43dbbcd15aee5" id="r_ae9b776e40324d6e53ee43dbbcd15aee5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classJK_1_1Window.html#ae9b776e40324d6e53ee43dbbcd15aee5">operator!=</a> (const <a class="el" href="classJK_1_1Window.html">Window</a> &amp;other) const</td></tr>
+<tr class="memdesc:ae9b776e40324d6e53ee43dbbcd15aee5"><td class="mdescLeft">&#160;</td><td class="mdescRight">overloaded != operator for comparing windows coefficients sets  <br /></td></tr>
+<tr class="separator:ae9b776e40324d6e53ee43dbbcd15aee5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1cd02e212d63cf4ab5ba9590667fa0ab" id="r_a1cd02e212d63cf4ab5ba9590667fa0ab"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classJK_1_1Window.html#a1cd02e212d63cf4ab5ba9590667fa0ab">Window</a> (std::string n)</td></tr>
 <tr class="memdesc:a1cd02e212d63cf4ab5ba9590667fa0ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructor supporting custom name  <br /></td></tr>
 <tr class="separator:a1cd02e212d63cf4ab5ba9590667fa0ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -101,10 +115,6 @@ Public Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><b>Window</b> ()</td></tr>
 <tr class="memdesc:a3d0550e92713f59e3681b13c2550fef1"><td class="mdescLeft">&#160;</td><td class="mdescRight">default constructor <br /></td></tr>
 <tr class="separator:a3d0550e92713f59e3681b13c2550fef1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8af5d941550651d92a82862e20210e62" id="r_a8af5d941550651d92a82862e20210e62"><td class="memItemLeft" align="right" valign="top"><a id="a8af5d941550651d92a82862e20210e62" name="a8af5d941550651d92a82862e20210e62"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>printCoeffs</b> () const</td></tr>
-<tr class="memdesc:a8af5d941550651d92a82862e20210e62"><td class="mdescLeft">&#160;</td><td class="mdescRight">method for printing window's coefficients in terminal, for testing purposes <br /></td></tr>
-<tr class="separator:a8af5d941550651d92a82862e20210e62"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afc5b59fba4afe9b0e135a4ddf1e94736" id="r_afc5b59fba4afe9b0e135a4ddf1e94736"><td class="memItemLeft" align="right" valign="top">std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classJK_1_1Window.html#afc5b59fba4afe9b0e135a4ddf1e94736">getCoeffs</a> () const</td></tr>
 <tr class="memdesc:afc5b59fba4afe9b0e135a4ddf1e94736"><td class="mdescLeft">&#160;</td><td class="mdescRight">getter for window coefficients  <br /></td></tr>
 <tr class="separator:afc5b59fba4afe9b0e135a4ddf1e94736"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -132,6 +142,12 @@ std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><
 std::string&#160;</td><td class="memItemRight" valign="bottom"><b>name</b> = &quot;&quot;</td></tr>
 <tr class="memdesc:ae183d598805f81c7c4bbcbfd176ede57"><td class="mdescLeft">&#160;</td><td class="mdescRight">window's name <br /></td></tr>
 <tr class="separator:ae183d598805f81c7c4bbcbfd176ede57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="friends" name="friends"></a>
+Friends</h2></td></tr>
+<tr class="memitem:a0e9d7bbb0a1d3ee20a84907f8c61ba7a" id="r_a0e9d7bbb0a1d3ee20a84907f8c61ba7a"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classJK_1_1Window.html#a0e9d7bbb0a1d3ee20a84907f8c61ba7a">operator&lt;&lt;</a> (std::ostream &amp;os, const <a class="el" href="classJK_1_1Window.html">Window</a> &amp;w)</td></tr>
+<tr class="memdesc:a0e9d7bbb0a1d3ee20a84907f8c61ba7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">overloaded &lt;&lt; operator for printing all coefficients into output stream  <br /></td></tr>
+<tr class="separator:a0e9d7bbb0a1d3ee20a84907f8c61ba7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classJK_1_1Window.html" title="Window class.">Window</a> class. </p>
@@ -180,7 +196,7 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>name</b> = &qu
 </div><div class="memdoc">
 
 <p>getter for window coefficients </p>
-<dl class="section return"><dt>Returns</dt><dd>returns a vector containing windiw coefficients </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>returns a vector containing window coefficients </dd></dl>
 
 </div>
 </div>
@@ -201,6 +217,60 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>name</b> = &qu
 
 <p>getter for window's name </p>
 <dl class="section return"><dt>Returns</dt><dd>returns a string containing filter's name </dd></dl>
+
+</div>
+</div>
+<a id="ae9b776e40324d6e53ee43dbbcd15aee5" name="ae9b776e40324d6e53ee43dbbcd15aee5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9b776e40324d6e53ee43dbbcd15aee5">&#9670;&#160;</a></span>operator!=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool JK::Window::operator!= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classJK_1_1Window.html">Window</a> &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>overloaded != operator for comparing windows coefficients sets </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>other <a class="el" href="classJK_1_1Window.html" title="Window class.">Window</a> Class object </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>returns 0 if window coeficients sets are the same, 1 if they are different </dd></dl>
+
+</div>
+</div>
+<a id="afe2ac2f2da0d3d86e2f45fa9c5f48e58" name="afe2ac2f2da0d3d86e2f45fa9c5f48e58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe2ac2f2da0d3d86e2f45fa9c5f48e58">&#9670;&#160;</a></span>operator==()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool JK::Window::operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classJK_1_1Window.html">Window</a> &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>overloaded == operator for comparing windows coefficients sets </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>other <a class="el" href="classJK_1_1Window.html" title="Window class.">Window</a> Class object </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>returns 1 if window coeficients sets are the same, 0 if they are different </dd></dl>
 
 </div>
 </div>
@@ -250,9 +320,56 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>name</b> = &qu
 
 </div>
 </div>
+<h2 class="groupheader">Friends And Related Symbol Documentation</h2>
+<a id="a0e9d7bbb0a1d3ee20a84907f8c61ba7a" name="a0e9d7bbb0a1d3ee20a84907f8c61ba7a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e9d7bbb0a1d3ee20a84907f8c61ba7a">&#9670;&#160;</a></span>operator&lt;&lt;</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ostream &amp; operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>os</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classJK_1_1Window.html">Window</a> &amp;&#160;</td>
+          <td class="paramname"><em>w</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>overloaded &lt;&lt; operator for printing all coefficients into output stream </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">os</td><td>output stream </td></tr>
+    <tr><td class="paramname">w</td><td><a class="el" href="classJK_1_1Window.html" title="Window class.">Window</a> class object </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>returns the output stream </dd></dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>/media/jakub/Windows-SSD/Users/kubak/projekty_git/Digital-filters/include/DigitalFilters/<a class="el" href="window_8hpp_source.html">window.hpp</a></li>
-<li>/media/jakub/Windows-SSD/Users/kubak/projekty_git/Digital-filters/src/<b>window.cpp</b></li>
+<li>include/DigitalFilters/<a class="el" href="window_8hpp_source.html">window.hpp</a></li>
+<li>src/<b>window.cpp</b></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

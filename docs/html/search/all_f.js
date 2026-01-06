@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['ubuntu_0',['Gnuplot Installation (Linux/Ubuntu)',['../index.html#autotoc_md4',1,'']]]
+  ['the_20project_0',['About the project',['../index.html#autotoc_md1',1,'']]]
 ];

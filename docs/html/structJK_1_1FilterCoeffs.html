@@ -75,6 +75,7 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="structJK_1_1FilterCoeffs-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">JK::FilterCoeffs Struct Reference</div></div>
@@ -86,6 +87,15 @@ $(function() {
 
 <p><code>#include &lt;<a class="el" href="filter_8hpp_source.html">filter.hpp</a>&gt;</code></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a78e2d5c8513c623f8c2ef5f2aa7d7949" id="r_a78e2d5c8513c623f8c2ef5f2aa7d7949"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJK_1_1FilterCoeffs.html#a78e2d5c8513c623f8c2ef5f2aa7d7949">operator==</a> (const <a class="el" href="structJK_1_1FilterCoeffs.html">FilterCoeffs</a> &amp;other) const</td></tr>
+<tr class="memdesc:a78e2d5c8513c623f8c2ef5f2aa7d7949"><td class="mdescLeft">&#160;</td><td class="mdescRight">feedback coefficients, equals [1.0] for fir  <br /></td></tr>
+<tr class="separator:a78e2d5c8513c623f8c2ef5f2aa7d7949"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8888d3dac92a08ccd3ba8612be8aec7" id="r_ae8888d3dac92a08ccd3ba8612be8aec7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJK_1_1FilterCoeffs.html#ae8888d3dac92a08ccd3ba8612be8aec7">operator!=</a> (const <a class="el" href="structJK_1_1FilterCoeffs.html">FilterCoeffs</a> &amp;other) const</td></tr>
+<tr class="memdesc:ae8888d3dac92a08ccd3ba8612be8aec7"><td class="mdescLeft">&#160;</td><td class="mdescRight">overloaded != operator for comparing filter coefficients sets  <br /></td></tr>
+<tr class="separator:ae8888d3dac92a08ccd3ba8612be8aec7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:afc05bea3f17db71a7988742d9d8b8aba" id="r_afc05bea3f17db71a7988742d9d8b8aba"><td class="memItemLeft" align="right" valign="top"><a id="afc05bea3f17db71a7988742d9d8b8aba" name="afc05bea3f17db71a7988742d9d8b8aba"></a>
@@ -98,8 +108,79 @@ std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>a structure for holding both feedback (a) and feedforward (b) coefficients </p>
-</div><hr/>The documentation for this struct was generated from the following file:<ul>
-<li>/media/jakub/Windows-SSD/Users/kubak/projekty_git/Digital-filters/include/DigitalFilters/<a class="el" href="filter_8hpp_source.html">filter.hpp</a></li>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="ae8888d3dac92a08ccd3ba8612be8aec7" name="ae8888d3dac92a08ccd3ba8612be8aec7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8888d3dac92a08ccd3ba8612be8aec7">&#9670;&#160;</a></span>operator!=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool JK::FilterCoeffs::operator!= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structJK_1_1FilterCoeffs.html">FilterCoeffs</a> &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>overloaded != operator for comparing filter coefficients sets </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>other <a class="el" href="structJK_1_1FilterCoeffs.html" title="a structure for holding both feedback (a) and feedforward (b) coefficients">FilterCoeffs</a> structure </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>returns 0 if coeficients sets are the same, 1 if they are different </dd></dl>
+
+</div>
+</div>
+<a id="a78e2d5c8513c623f8c2ef5f2aa7d7949" name="a78e2d5c8513c623f8c2ef5f2aa7d7949"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78e2d5c8513c623f8c2ef5f2aa7d7949">&#9670;&#160;</a></span>operator==()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool JK::FilterCoeffs::operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structJK_1_1FilterCoeffs.html">FilterCoeffs</a> &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>feedback coefficients, equals [1.0] for fir </p>
+<p>overloaded == operator for comparing filter coefficients sets </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>other <a class="el" href="structJK_1_1FilterCoeffs.html" title="a structure for holding both feedback (a) and feedforward (b) coefficients">FilterCoeffs</a> structure </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>returns 1 if coeficients sets are the same, 0 if they are different </dd></dl>
+
+</div>
+</div>
+<hr/>The documentation for this struct was generated from the following file:<ul>
+<li>include/DigitalFilters/<a class="el" href="filter_8hpp_source.html">filter.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

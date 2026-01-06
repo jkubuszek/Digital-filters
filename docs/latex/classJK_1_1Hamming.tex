@@ -1,4 +1,4 @@
-\doxysection{JK\+::Hamming Class Reference}
+\doxysubsection{JK\+::Hamming Class Reference}
 \hypertarget{classJK_1_1Hamming}{}\label{classJK_1_1Hamming}\index{JK::Hamming@{JK::Hamming}}
 
 
@@ -11,13 +11,23 @@
 
 
 
-Inheritance diagram for JK\+::Hamming\+:
-% FIG 0
+Inheritance diagram for JK\+::Hamming\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=157pt]{classJK_1_1Hamming__inherit__graph}
+\end{center}
+\end{figure}
 
 
-Collaboration diagram for JK\+::Hamming\+:
-% FIG 1
-\doxysubsubsection*{Public Member Functions}
+Collaboration diagram for JK\+::Hamming\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=157pt]{classJK_1_1Hamming__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classJK_1_1Hamming_adb0dac298ae08bee0e6a58dd0299e935}{Hamming}} (size\+\_\+t N)
@@ -27,15 +37,17 @@ Collaboration diagram for JK\+::Hamming\+:
 \Hypertarget{classJK_1_1Hamming_a33445ecaed234db966e6f742dfca8728}\label{classJK_1_1Hamming_a33445ecaed234db966e6f742dfca8728} 
 {\bfseries Hamming} ()
 \begin{DoxyCompactList}\small\item\em default constructor \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classJK_1_1Window}{JK\+::\+Window}}}
+\doxyparagraph*{Public Member Functions inherited from \mbox{\hyperlink{classJK_1_1Window}{JK\+::\+Window}}}
 \begin{DoxyCompactItemize}
 \item 
+bool \mbox{\hyperlink{classJK_1_1Window_afe2ac2f2da0d3d86e2f45fa9c5f48e58}{operator==}} (const \mbox{\hyperlink{classJK_1_1Window}{Window}} \&other) const
+\begin{DoxyCompactList}\small\item\em overloaded == operator for comparing windows coefficients sets \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classJK_1_1Window_ae9b776e40324d6e53ee43dbbcd15aee5}{operator!=}} (const \mbox{\hyperlink{classJK_1_1Window}{Window}} \&other) const
+\begin{DoxyCompactList}\small\item\em overloaded != operator for comparing windows coefficients sets \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classJK_1_1Window_a1cd02e212d63cf4ab5ba9590667fa0ab}{Window}} (std\+::string n)
 \begin{DoxyCompactList}\small\item\em constructor supporting custom name \end{DoxyCompactList}\item 
 {\bfseries Window} ()
 \begin{DoxyCompactList}\small\item\em default constructor \end{DoxyCompactList}\item 
-void {\bfseries print\+Coeffs} () const
-\begin{DoxyCompactList}\small\item\em method for printing window\textquotesingle{}s coefficients in terminal, for testing purposes \end{DoxyCompactList}\item 
 std\+::vector$<$ double $>$ \mbox{\hyperlink{classJK_1_1Window_afc5b59fba4afe9b0e135a4ddf1e94736}{get\+Coeffs}} () const
 \begin{DoxyCompactList}\small\item\em getter for window coefficients \end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{classJK_1_1Window_a348d962e858330808f6b86ccae482a2a}{get\+Name}} () const
@@ -46,8 +58,8 @@ size\+\_\+t \mbox{\hyperlink{classJK_1_1Window_a030758753ec49e0ff25b237a42178a69
 \begin{DoxyCompactList}\small\item\em method for getting the window\textquotesingle{}s size (the size of the coefficients vector) \end{DoxyCompactList}\item 
 virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Window} ()
 \begin{DoxyCompactList}\small\item\em virtual destructor, for memory safety when using polymorphism \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsubsection*{Additional Inherited Members}
-\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classJK_1_1Window}{JK\+::\+Window}}}
+\doxysubsubsubsection*{Additional Inherited Members}
+\doxyparagraph*{Protected Attributes inherited from \mbox{\hyperlink{classJK_1_1Window}{JK\+::\+Window}}}
 \begin{DoxyCompactItemize}
 \item 
 std\+::vector$<$ double $>$ {\bfseries coeffs} = \{\}
@@ -56,14 +68,14 @@ std\+::string {\bfseries name} = "{}"{}
 \begin{DoxyCompactList}\small\item\em window\textquotesingle{}s name \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-\doxysubsection{Detailed Description}
+\doxysubsubsection{Detailed Description}
 \doxylink{classJK_1_1Hamming}{Hamming} window class. 
 
-\doxysubsection{Constructor \& Destructor Documentation}
+\doxysubsubsection{Constructor \& Destructor Documentation}
 \Hypertarget{classJK_1_1Hamming_adb0dac298ae08bee0e6a58dd0299e935}\label{classJK_1_1Hamming_adb0dac298ae08bee0e6a58dd0299e935} 
 \index{JK::Hamming@{JK::Hamming}!Hamming@{Hamming}}
 \index{Hamming@{Hamming}!JK::Hamming@{JK::Hamming}}
-\doxysubsubsection{\texorpdfstring{Hamming()}{Hamming()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+\doxyparagraph{\texorpdfstring{Hamming()}{Hamming()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily JK\+::\+Hamming\+::\+Hamming (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{N }\end{DoxyParamCaption})}
 
 
@@ -78,7 +90,7 @@ constructor supporting a custom number of coefficients
 \Hypertarget{classJK_1_1Hamming_a9b32913226bc7feb53b599597e8679d2}\label{classJK_1_1Hamming_a9b32913226bc7feb53b599597e8679d2} 
 \index{JK::Hamming@{JK::Hamming}!Hamming@{Hamming}}
 \index{Hamming@{Hamming}!JK::Hamming@{JK::Hamming}}
-\doxysubsubsection{\texorpdfstring{Hamming()}{Hamming()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+\doxyparagraph{\texorpdfstring{Hamming()}{Hamming()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily JK\+::\+Hamming\+::\+Hamming (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classJK_1_1Filter}{Filter}} \&}]{f }\end{DoxyParamCaption})}
 
 
@@ -94,5 +106,5 @@ constructor supporting a number of coefficients based on a referenced \doxylink{
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-/media/jakub/\+Windows-\/\+SSD/\+Users/kubak/projekty\+\_\+git/\+Digital-\/filters/include/\+Digital\+Filters/\mbox{\hyperlink{hamming_8hpp}{hamming.\+hpp}}\item 
-/media/jakub/\+Windows-\/\+SSD/\+Users/kubak/projekty\+\_\+git/\+Digital-\/filters/src/hamming.\+cpp\end{DoxyCompactItemize}
+include/\+Digital\+Filters/\mbox{\hyperlink{hamming_8hpp}{hamming.\+hpp}}\item 
+src/hamming.\+cpp\end{DoxyCompactItemize}

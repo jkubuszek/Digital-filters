@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['plot2d_0',['plot2d',['../plots_8hpp.html#af1ccf92dd23b5616b1702a989656c1bf',1,'JK::plot2d(const std::vector&lt; double &gt; &amp;y, std::string name)'],['../plots_8hpp.html#a88c6ce0673951b3df1aaa72c40068b4f',1,'JK::plot2d(const std::vector&lt; double &gt; &amp;x, const std::vector&lt; double &gt; &amp;y, std::string name)']]],
-  ['printcoeffs_1',['printcoeffs',['../classJK_1_1Filter.html#af136454d80fdb4bfd96d6dad5bac20bd',1,'JK::Filter::printCoeffs()'],['../classJK_1_1FIR.html#ab60b254b36ce76a8898cbb064044f395',1,'JK::FIR::printCoeffs()'],['../classJK_1_1IIR.html#a20befcebaa355ccb681ea0c3fb73e6e2',1,'JK::IIR::printCoeffs()'],['../classJK_1_1Window.html#a8af5d941550651d92a82862e20210e62',1,'JK::Window::printCoeffs()']]],
-  ['printname_2',['printName',['../classJK_1_1Filter.html#aea8279fe609db775fa0e7b169c762d18',1,'JK::Filter']]]
+  ['operator_21_3d_0',['operator!=',['../structJK_1_1FilterCoeffs.html#ae8888d3dac92a08ccd3ba8612be8aec7',1,'JK::FilterCoeffs::operator!=()'],['../classJK_1_1Filter.html#a2f84bc73fa37aa01aa86609553a33cc3',1,'JK::Filter::operator!=()'],['../classJK_1_1Window.html#ae9b776e40324d6e53ee43dbbcd15aee5',1,'JK::Window::operator!=()']]],
+  ['operator_3d_3d_1',['operator==',['../structJK_1_1FilterCoeffs.html#a78e2d5c8513c623f8c2ef5f2aa7d7949',1,'JK::FilterCoeffs::operator==()'],['../classJK_1_1Filter.html#a8ea0d12385570c0216aec94bfc236d21',1,'JK::Filter::operator==()'],['../classJK_1_1Window.html#afe2ac2f2da0d3d86e2f45fa9c5f48e58',1,'JK::Window::operator==()']]]
 ];

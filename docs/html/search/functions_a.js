@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['_7efilter_0',['~Filter',['../classJK_1_1Filter.html#a343770f558e95bb8aa9e714e647539b3',1,'JK::Filter']]],
-  ['_7ewindow_1',['~Window',['../classJK_1_1Window.html#ae51aef0bd1ed7e089fa6f956f0d5fda5',1,'JK::Window']]]
+  ['window_0',['window',['../classJK_1_1Window.html#a1cd02e212d63cf4ab5ba9590667fa0ab',1,'JK::Window::Window(std::string n)'],['../classJK_1_1Window.html#a3d0550e92713f59e3681b13c2550fef1',1,'JK::Window::Window()']]]
 ];

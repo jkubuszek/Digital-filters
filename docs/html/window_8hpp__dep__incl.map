@@ -1,0 +1,15 @@
+<map id="include/DigitalFilters/window.hpp" name="include/DigitalFilters/window.hpp">
+<area shape="rect" id="Node000001" title="This file handles the Window class." alt="" coords="224,5,364,45"/>
+<area shape="rect" id="Node000002" href="$filter_8hpp.html" title="This file handles the base filter class." alt="" coords="224,93,364,133"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="297,59,297,93,291,93,291,59"/>
+<area shape="rect" id="Node000004" href="$hamming_8hpp.html" title="This file handles the Hamming class, which is a child class of Window." alt="" coords="5,181,145,221"/>
+<area shape="poly" id="edge6_Node000001_Node000004" title=" " alt="" coords="261,56,101,183,97,179,258,52"/>
+<area shape="rect" id="Node000005" href="$hanning_8hpp.html" title="This file handles the Hanning class, which is a child class of Window." alt="" coords="497,181,637,221"/>
+<area shape="poly" id="edge7_Node000001_Node000005" title=" " alt="" coords="337,51,539,179,536,183,334,55"/>
+<area shape="rect" id="Node000003" href="$fir_8hpp.html" title="This file handles the FIR class, which is a child class of Filter." alt="" coords="169,181,309,221"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="277,146,254,183,249,180,272,144"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="234,141,124,184,122,179,232,136"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="368,135,508,179,507,184,366,140"/>
+<area shape="rect" id="Node000006" href="$iir_8hpp.html" title="This file handles the IIR class, which is a child class of Filter." alt="" coords="333,181,473,221"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="331,140,381,179,377,183,327,144"/>
+</map>

@@ -34,9 +34,9 @@ namespace JK{
     };
     /// @brief a structure for holding  all the parameters needed for Bode plots
     struct BodeData{
-        std::vector<double> freq; /// frequency index vector
-        std::vector<double> mag_db; /// magnitutde in decibels corresponding to each element from freq vector
-        std::vector<double> phase_deg; // phase in degrees corresponding to each element from freq vector
+        std::vector<double> freq; /// frequency vector in Hz
+        std::vector<double> mag_db; /// magnitude in decibels corresponding to each element from freq vector
+        std::vector<double> phase_deg; /// phase in degrees corresponding to each element from freq vector
     };
     /// @brief Filter class representing a digital filter
     class Filter{    
@@ -89,7 +89,7 @@ namespace JK{
         /// @brief method for calculating filter's response to a given signal
         /// @param x vector containing signal samples
         /// @param y_len desired output length, defaults to length of the signal vector if not specified
-        /// @return returns a vector with calculated reponse of the filter
+        /// @return returns a vector with calculated response of the filter
         virtual std::vector<double> response(const std::vector<double> &x, const int y_len = -1) = 0;
 
         /// @brief method for plotting the filter's response to a given signal 

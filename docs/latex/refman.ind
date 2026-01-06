@@ -1,0 +1,153 @@
+\begin{theindex}
+
+  \item {applyWindow}
+    \subitem {JK::Filter}, \hyperpage{7}
+
+  \indexspace
+
+  \item {bode}
+    \subitem {JK::Filter}, \hyperpage{7}
+  \item {bodePlot}
+    \subitem {JK::Filter}, \hyperpage{8}
+
+  \indexspace
+
+  \item {DigitalFilters Library}, \hyperpage{1}
+
+  \indexspace
+
+  \item {Filter}
+    \subitem {JK::Filter}, \hyperpage{7}
+  \item {FIR}
+    \subitem {JK::FIR}, \hyperpage{14}
+
+  \indexspace
+
+  \item {getCoeffs}
+    \subitem {JK::Filter}, \hyperpage{8}
+    \subitem {JK::FIR}, \hyperpage{15}
+    \subitem {JK::IIR}, \hyperpage{23}
+    \subitem {JK::Window}, \hyperpage{26}
+  \item {getName}
+    \subitem {JK::Filter}, \hyperpage{8}
+    \subitem {JK::Window}, \hyperpage{26}
+
+  \indexspace
+
+  \item {Hamming}
+    \subitem {JK::Hamming}, \hyperpage{18}
+  \item {Hanning}
+    \subitem {JK::Hanning}, \hyperpage{20}
+
+  \indexspace
+
+  \item {IIR}
+    \subitem {JK::IIR}, \hyperpage{23}
+  \item {include/DigitalFilters/filter.hpp}, \hyperpage{28, 29}
+  \item {include/DigitalFilters/fir.hpp}, \hyperpage{30, 31}
+  \item {include/DigitalFilters/hamming.hpp}, \hyperpage{32, 33}
+  \item {include/DigitalFilters/hanning.hpp}, \hyperpage{33, 34}
+  \item {include/DigitalFilters/iir.hpp}, \hyperpage{34, 35}
+  \item {include/DigitalFilters/plots.hpp}, \hyperpage{36, 37}
+  \item {include/DigitalFilters/window.hpp}, \hyperpage{37}, 
+		\hyperpage{39}
+
+  \indexspace
+
+  \item {JK::BodeData}, \hyperpage{4}
+  \item {JK::Filter}, \hyperpage{5}
+    \subitem {applyWindow}, \hyperpage{7}
+    \subitem {bode}, \hyperpage{7}
+    \subitem {bodePlot}, \hyperpage{8}
+    \subitem {Filter}, \hyperpage{7}
+    \subitem {getCoeffs}, \hyperpage{8}
+    \subitem {getName}, \hyperpage{8}
+    \subitem {operator!=}, \hyperpage{8}
+    \subitem {operator$<$$<$}, \hyperpage{11}
+    \subitem {operator==}, \hyperpage{9}
+    \subitem {print}, \hyperpage{9}
+    \subitem {response}, \hyperpage{9}
+    \subitem {responsePlot}, \hyperpage{10}
+    \subitem {setCoeffs}, \hyperpage{10}
+    \subitem {setName}, \hyperpage{10}
+  \item {JK::FilterCoeffs}, \hyperpage{11}
+    \subitem {operator!=}, \hyperpage{11}
+    \subitem {operator==}, \hyperpage{12}
+  \item {JK::FIR}, \hyperpage{12}
+    \subitem {FIR}, \hyperpage{14}
+    \subitem {getCoeffs}, \hyperpage{15}
+    \subitem {print}, \hyperpage{15}
+    \subitem {response}, \hyperpage{15}
+    \subitem {setCoeffs}, \hyperpage{16}
+  \item {JK::Hamming}, \hyperpage{16}
+    \subitem {Hamming}, \hyperpage{18}
+  \item {JK::Hanning}, \hyperpage{18}
+    \subitem {Hanning}, \hyperpage{20}
+  \item {JK::IIR}, \hyperpage{21}
+    \subitem {getCoeffs}, \hyperpage{23}
+    \subitem {IIR}, \hyperpage{23}
+    \subitem {print}, \hyperpage{23}
+    \subitem {response}, \hyperpage{23}
+    \subitem {setCoeffs}, \hyperpage{24}
+  \item {JK::Window}, \hyperpage{24}
+    \subitem {getCoeffs}, \hyperpage{26}
+    \subitem {getName}, \hyperpage{26}
+    \subitem {operator!=}, \hyperpage{26}
+    \subitem {operator$<$$<$}, \hyperpage{28}
+    \subitem {operator==}, \hyperpage{27}
+    \subitem {setName}, \hyperpage{27}
+    \subitem {size}, \hyperpage{27}
+    \subitem {Window}, \hyperpage{26}
+
+  \indexspace
+
+  \item {operator!=}
+    \subitem {JK::Filter}, \hyperpage{8}
+    \subitem {JK::FilterCoeffs}, \hyperpage{11}
+    \subitem {JK::Window}, \hyperpage{26}
+  \item {operator$<$$<$}
+    \subitem {JK::Filter}, \hyperpage{11}
+    \subitem {JK::Window}, \hyperpage{28}
+  \item {operator==}
+    \subitem {JK::Filter}, \hyperpage{9}
+    \subitem {JK::FilterCoeffs}, \hyperpage{12}
+    \subitem {JK::Window}, \hyperpage{27}
+
+  \indexspace
+
+  \item {plot2d}
+    \subitem {plots.hpp}, \hyperpage{37}
+  \item {plots.hpp}
+    \subitem {plot2d}, \hyperpage{37}
+  \item {print}
+    \subitem {JK::Filter}, \hyperpage{9}
+    \subitem {JK::FIR}, \hyperpage{15}
+    \subitem {JK::IIR}, \hyperpage{23}
+
+  \indexspace
+
+  \item {response}
+    \subitem {JK::Filter}, \hyperpage{9}
+    \subitem {JK::FIR}, \hyperpage{15}
+    \subitem {JK::IIR}, \hyperpage{23}
+  \item {responsePlot}
+    \subitem {JK::Filter}, \hyperpage{10}
+
+  \indexspace
+
+  \item {setCoeffs}
+    \subitem {JK::Filter}, \hyperpage{10}
+    \subitem {JK::FIR}, \hyperpage{16}
+    \subitem {JK::IIR}, \hyperpage{24}
+  \item {setName}
+    \subitem {JK::Filter}, \hyperpage{10}
+    \subitem {JK::Window}, \hyperpage{27}
+  \item {size}
+    \subitem {JK::Window}, \hyperpage{27}
+
+  \indexspace
+
+  \item {Window}
+    \subitem {JK::Window}, \hyperpage{26}
+
+\end{theindex}

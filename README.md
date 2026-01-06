@@ -2,7 +2,7 @@
 
 A C++ library for the design and analysis of digital signal filters (FIR, IIR). It enables easy creation of low-pass and high-pass filters, application of time windows, and generation of time response and frequency response (Bode) plots.
 
-The library was created by **[Jakub Kubuszek/ Initials: JK]**.
+The library was created by Jakub Kubuszek.
 
 # About the project
 The library is my final project for the "Object-oriented programming languages" course at AGH in Cracow.

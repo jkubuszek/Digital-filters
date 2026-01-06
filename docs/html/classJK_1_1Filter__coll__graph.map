@@ -1,0 +1,5 @@
+<map id="JK::Filter" name="JK::Filter">
+<area shape="rect" id="Node000001" title="Filter class representing a digital filter." alt="" coords="25,93,100,119"/>
+<area shape="rect" id="Node000002" href="$structJK_1_1FilterCoeffs.html" title="a structure for holding both feedback (a) and feedforward (b) coefficients" alt="" coords="5,5,120,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="65,45,65,93,60,93,60,45"/>
+</map>

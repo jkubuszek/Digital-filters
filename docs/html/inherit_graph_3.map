@@ -1,0 +1,7 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" href="$classJK_1_1Window.html" title="Window class." alt="" coords="5,31,99,56"/>
+<area shape="rect" id="Node000001" href="$classJK_1_1Hamming.html" title="Hamming window class." alt="" coords="147,5,249,31"/>
+<area shape="poly" id="edge3_Node000000_Node000001" title=" " alt="" coords="111,30,146,24,147,29,112,36"/>
+<area shape="rect" id="Node000002" href="$classJK_1_1Hanning.html" title="Hanning window class." alt="" coords="151,55,245,80"/>
+<area shape="poly" id="edge4_Node000000_Node000002" title=" " alt="" coords="112,51,151,57,150,62,111,56"/>
+</map>

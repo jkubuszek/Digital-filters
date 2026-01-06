@@ -42,7 +42,7 @@ namespace JK{
         friend std::ostream& operator<<(std::ostream& os, const Window& w);
         
         /// @brief getter for window coefficients
-        /// @return returns a vector containing windiw coefficients
+        /// @return returns a vector containing window coefficients
         std::vector<double> getCoeffs() const;
 
         /// @brief getter for window's name

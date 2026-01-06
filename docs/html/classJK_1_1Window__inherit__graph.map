@@ -1,0 +1,7 @@
+<map id="JK::Window" name="JK::Window">
+<area shape="rect" id="Node000001" title="Window class." alt="" coords="71,5,165,31"/>
+<area shape="rect" id="Node000002" href="$classJK_1_1Hamming.html" title="Hamming window class." alt="" coords="5,79,108,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="101,43,69,80,65,77,97,40"/>
+<area shape="rect" id="Node000003" href="$classJK_1_1Hanning.html" title="Hanning window class." alt="" coords="132,79,227,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="139,40,171,77,167,80,135,43"/>
+</map>

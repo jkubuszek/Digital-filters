@@ -1,4 +1,4 @@
-\doxysection{JK\+::Filter\+Coeffs Struct Reference}
+\doxysubsection{JK\+::Filter\+Coeffs Struct Reference}
 \hypertarget{structJK_1_1FilterCoeffs}{}\label{structJK_1_1FilterCoeffs}\index{JK::FilterCoeffs@{JK::FilterCoeffs}}
 
 
@@ -9,7 +9,14 @@ a structure for holding both feedback (a) and feedforward (b) coefficients
 
 {\ttfamily \#include $<$filter.\+hpp$>$}
 
-\doxysubsubsection*{Public Attributes}
+\doxysubsubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{structJK_1_1FilterCoeffs_a78e2d5c8513c623f8c2ef5f2aa7d7949}{operator==}} (const \mbox{\hyperlink{structJK_1_1FilterCoeffs}{Filter\+Coeffs}} \&other) const
+\begin{DoxyCompactList}\small\item\em feedback coefficients, equals \mbox{[}1.\+0\mbox{]} for fir \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structJK_1_1FilterCoeffs_ae8888d3dac92a08ccd3ba8612be8aec7}{operator!=}} (const \mbox{\hyperlink{structJK_1_1FilterCoeffs}{Filter\+Coeffs}} \&other) const
+\begin{DoxyCompactList}\small\item\em overloaded != operator for comparing filter coefficients sets \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
 \Hypertarget{structJK_1_1FilterCoeffs_afc05bea3f17db71a7988742d9d8b8aba}\label{structJK_1_1FilterCoeffs_afc05bea3f17db71a7988742d9d8b8aba} 
@@ -20,9 +27,48 @@ std\+::vector$<$ double $>$ {\bfseries a}
 \begin{DoxyCompactList}\small\item\em feedfoward coefficients \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-\doxysubsection{Detailed Description}
+\doxysubsubsection{Detailed Description}
 a structure for holding both feedback (a) and feedforward (b) coefficients 
+
+\doxysubsubsection{Member Function Documentation}
+\Hypertarget{structJK_1_1FilterCoeffs_ae8888d3dac92a08ccd3ba8612be8aec7}\label{structJK_1_1FilterCoeffs_ae8888d3dac92a08ccd3ba8612be8aec7} 
+\index{JK::FilterCoeffs@{JK::FilterCoeffs}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!JK::FilterCoeffs@{JK::FilterCoeffs}}
+\doxyparagraph{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily bool JK\+::\+Filter\+Coeffs\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structJK_1_1FilterCoeffs}{Filter\+Coeffs}} \&}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+overloaded != operator for comparing filter coefficients sets 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & other \doxylink{structJK_1_1FilterCoeffs}{Filter\+Coeffs} structure \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns 0 if coeficients sets are the same, 1 if they are different 
+\end{DoxyReturn}
+\Hypertarget{structJK_1_1FilterCoeffs_a78e2d5c8513c623f8c2ef5f2aa7d7949}\label{structJK_1_1FilterCoeffs_a78e2d5c8513c623f8c2ef5f2aa7d7949} 
+\index{JK::FilterCoeffs@{JK::FilterCoeffs}!operator==@{operator==}}
+\index{operator==@{operator==}!JK::FilterCoeffs@{JK::FilterCoeffs}}
+\doxyparagraph{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool JK\+::\+Filter\+Coeffs\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structJK_1_1FilterCoeffs}{Filter\+Coeffs}} \&}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+feedback coefficients, equals \mbox{[}1.\+0\mbox{]} for fir 
+
+overloaded == operator for comparing filter coefficients sets 
+\begin{DoxyParams}{Parameters}
+{\em other} & other \doxylink{structJK_1_1FilterCoeffs}{Filter\+Coeffs} structure \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns 1 if coeficients sets are the same, 0 if they are different 
+\end{DoxyReturn}
+
 
 The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-/media/jakub/\+Windows-\/\+SSD/\+Users/kubak/projekty\+\_\+git/\+Digital-\/filters/include/\+Digital\+Filters/\mbox{\hyperlink{filter_8hpp}{filter.\+hpp}}\end{DoxyCompactItemize}
+include/\+Digital\+Filters/\mbox{\hyperlink{filter_8hpp}{filter.\+hpp}}\end{DoxyCompactItemize}

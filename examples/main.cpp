@@ -9,7 +9,8 @@
 #include "DigitalFilters/plots.hpp"
 
 
-std::vector<double> noisy_sine(int size, double freq, double amp, double noise_level) {
+
+std::vector<double> noisy_sine(int size, double freq, double fs, double amp, double noise_level) {
     std::vector<double> signal;
     signal.reserve(size);
 
@@ -18,7 +19,7 @@ std::vector<double> noisy_sine(int size, double freq, double amp, double noise_l
     std::mt19937 gen(rd());
     std::uniform_real_distribution<> noise(-noise_level, noise_level);
     for (int i = 0; i < size; i++) {
-        double clean_val = amp*sin(freq*i);
+        double clean_val = amp * std::sin(2.0 * M_PI * freq * i / fs);
         double noisy_val = clean_val + noise(gen);
         signal.push_back(noisy_val);
     }
@@ -33,19 +34,21 @@ int main(){
         JK::FIR fir(fir_coeffs);
         JK::IIR iir(iir_coeffs_b, iir_coeffs_a);
 
-        int fs = 1000;
+        int fs = 10000;
+        int cutoff_f = 100;
 
-        JK::FIR lowpass(JK::FIR::FilterType::LowPass, 20, 400, fs);
+        JK::FIR lowpass(JK::FIR::FilterType::LowPass, 300, cutoff_f, fs);
         JK::Hamming h_lowpass(lowpass);
         lowpass.applyWindow(h_lowpass);
 
-        JK::FIR highpass(JK::FIR::FilterType::HighPass, 21, 400, fs);
+        JK::FIR highpass(JK::FIR::FilterType::HighPass, 301, cutoff_f, fs);
         JK::Hamming h_highpass(highpass);
         highpass.applyWindow(h_highpass);
 
 
-        std::vector sine = noisy_sine(200, 0.1, 1, 0.1);
+        std::vector sine = noisy_sine(2000, 200, fs, 1, 0.1);
 
+        JK::plot2d(sine, "sine");
         highpass.responsePlot(sine);
         lowpass.responsePlot(sine);
 
@@ -57,7 +60,7 @@ int main(){
 
 
     } catch(const std::exception &e){
-        std::cerr << "CRITICAL ERROR: " << e.what() << std::endl;
+        std::cerr << e.what() << std::endl;
         return 1;
     }
     return 0;

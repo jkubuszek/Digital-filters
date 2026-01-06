@@ -1,0 +1,16 @@
+<map id="include/DigitalFilters/hamming.hpp" name="include/DigitalFilters/hamming.hpp">
+<area shape="rect" id="Node000001" title="This file handles the Hamming class, which is a child class of Window." alt="" coords="131,5,271,45"/>
+<area shape="rect" id="Node000002" href="$window_8hpp.html" title="This file handles the Window class." alt="" coords="203,167,292,192"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="209,45,242,153,237,154,204,47"/>
+<area shape="rect" id="Node000005" href="$filter_8hpp.html" title="This file handles the base filter class." alt="" coords="129,93,200,119"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="194,47,178,82,173,79,190,44"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="207,240,261,265"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="248,193,241,227,236,226,243,192"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="110,240,169,265"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="231,194,170,235,167,230,229,190"/>
+<area shape="poly" id="edge8_Node000005_Node000002" title=" " alt="" coords="180,117,225,155,222,160,176,121"/>
+<area shape="poly" id="edge5_Node000005_Node000003" title=" " alt="" coords="170,118,178,151,194,191,218,228,213,231,189,193,173,153,164,119"/>
+<area shape="poly" id="edge6_Node000005_Node000004" title=" " alt="" coords="163,120,149,167,142,226,137,226,143,166,158,118"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="5,167,76,192"/>
+<area shape="poly" id="edge7_Node000005_Node000006" title=" " alt="" coords="146,121,74,162,71,157,143,116"/>
+</map>

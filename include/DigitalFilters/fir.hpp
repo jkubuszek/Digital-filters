@@ -57,7 +57,7 @@ namespace JK{
         /// @brief method for calculating filter's response to a given signal
         /// @param x vector containing signal samples
         /// @param y_len desired output length, defaults to length of the signal vector if not specified
-        /// @return returns a vector with calculated reponse of the filter
+        /// @return returns a vector with calculated response of the filter
         std::vector<double> response(const std::vector<double> &x, const int y_len = -1) override;
     };
 }
