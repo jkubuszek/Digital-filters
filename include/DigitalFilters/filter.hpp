@@ -49,7 +49,7 @@ namespace JK{
         std::string name;
 
         /// @brief structure holding filter's coefficients
-        FilterCoeffs coeffs; 
+        FilterCoeffs coeffs;
     public:
 
         /// @brief overloaded == operator for comparing filter type and their coefficients sets

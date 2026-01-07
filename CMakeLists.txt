@@ -16,10 +16,7 @@ add_library(DigitalFiltersLib STATIC
     src/plots.cpp
 )
 
-# library alias
-add_library(JK::Lib ALIAS DigitalFiltersLib)
-
-# hiding the implementation
+# hiding the plots implementation (sciplot)
 target_include_directories(DigitalFiltersLib PRIVATE libs) 
 
 # client-side interfaces, so the library "knows where to look" for header files

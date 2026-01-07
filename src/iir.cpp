@@ -57,6 +57,10 @@ namespace JK{
         }
         
     void IIR::setCoeffs(const std::vector<double> &b, const std::vector<double> &a){
+        if(coeffs.b.size() <= 1){
+            throw std::length_error("Error: setCoeffs error: " 
+                "a filter cannot have less than 2 b-coefficients.");
+        }
         coeffs.b = b;
         if(coeffs.a.empty() || coeffs.a[0] == 0.0) {
             coeffs.a = {1.0};

@@ -7,10 +7,12 @@
 namespace JK{
     void FIR::design_low_pass(int order, double cutoff_f, double fs){   
         if(order <= 0 || fs <= 0){
-            throw std::invalid_argument("Error: Filter order and sampling frequency must be positive.");
+            throw std::invalid_argument("Error: design_low_pass error: "
+                "Filter order and sampling frequency must be positive.");
         }
         if(cutoff_f <= 0 || cutoff_f >= fs / 2){
-            throw std::invalid_argument("Error: Cutoff frequency must be positive and less than fs/2 (Nyquist limit).");
+            throw std::invalid_argument("Error: design_low_pass error: "
+                "Cutoff frequency must be positive and less than fs/2 (Nyquist limit).");
         }
         
         std::vector<double> b(order, 0.0);
@@ -33,13 +35,16 @@ namespace JK{
     void FIR::design_high_pass(int order, double cutoff_f, double fs){   
 
         if(order <= 0 || fs <= 0){
-            throw std::invalid_argument("Error: Filter order and sampling frequency must be positive.");
+            throw std::invalid_argument("Error: design_high_pass error: "
+                "Filter order and sampling frequency must be positive.");
         }
         if(cutoff_f <= 0 || cutoff_f >= fs / 2){
-            throw std::invalid_argument("Error: Cutoff frequency must be positive and less than fs/2 (Nyquist limit).");
+            throw std::invalid_argument("Error: design_high_pass error: "
+                "Cutoff frequency must be positive and less than fs/2 (Nyquist limit).");
         }
         if(order % 2 == 0){
-            throw std::invalid_argument("Error: Filter order must be odd");
+            throw std::invalid_argument("Error: design_high_pass error: "
+                "Filter order must be odd");
         }
 
         std::vector<double> b(order, 0.0);
@@ -63,10 +68,8 @@ namespace JK{
 
     FIR::FIR() : Filter() {}
 
-    FIR::FIR(FilterType type, int order, double cutoff_f, double fs) : Filter()
-    {
-        switch (type)
-        {
+    FIR::FIR(FilterType type, int order, double cutoff_f, double fs) : Filter(){
+        switch (type){
         case FilterType::LowPass:
             design_low_pass(order, cutoff_f, fs);
             name = "FIR LowPass";
@@ -94,31 +97,27 @@ namespace JK{
         return {coeffs.b, {1.0}};
     }
 
-    void FIR::setCoeffs(const std::vector<double> &b, const std::vector<double> &a) 
-    {
+    void FIR::setCoeffs(const std::vector<double> &b, const std::vector<double> &a){
+        if(coeffs.b.size() <= 1){
+            throw std::length_error("Error: setCoeffs error: " 
+                "a filter cannot have less than 2 b-coefficients.");
+        }
         coeffs.b = b;
         coeffs.a = {1.0};
     }
 
-    std::vector<double> FIR::response(const std::vector<double> &x, const int y_len) 
-    {
+    std::vector<double> FIR::response(const std::vector<double> &x, const int y_len){
         int y_length;
-        if (y_len > 0)
-        {
+        if (y_len > 0){
             y_length = (size_t)y_len;
-        }
-        else
-        {
+        } else {
             y_length = x.size();
         }
         std::vector<double> y(y_length, 0.0);
-        for (int n = 0; n < y_length; n++)
-        { // calculating the response
+        for (int n = 0; n < y_length; n++){ // calculating the response
             double res = 0.0;
-            for (int m = 0; m < coeffs.b.size(); m++)
-            {
-                if ((0 <= (n - m)) && ((n - m) < x.size()))
-                {
+            for (int m = 0; m < coeffs.b.size(); m++){
+                if ((0 <= (n - m)) && ((n - m) < x.size())){
                     res += coeffs.b[m] * x[n - m];
                 }
             }

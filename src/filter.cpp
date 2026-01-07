@@ -7,9 +7,14 @@
 #include <stdexcept>
 
 namespace JK{
-    Filter::Filter(std::string n, const std::vector<double> &b, const std::vector<double> &a) : name(n), coeffs{b,a} {}
+    Filter::Filter(std::string n, const std::vector<double> &b, const std::vector<double> &a) : name(n), coeffs{b,a} {
+        if(coeffs.b.size() <= 1){
+            throw std::length_error("Error: Filter constructor error: "
+                "Cannot create a filter with less than 2 b-coefficients.");
+        }
+    }
     Filter::Filter(){
-        coeffs.b = {0.0};
+        coeffs.b = {0.0, 0.0};
         coeffs.a = {1.0};
         name = "";
     }
@@ -33,21 +38,14 @@ namespace JK{
     }
 
     void Filter::applyWindow(const Window &win){
-        if(coeffs.b.size() <= 1){
-            throw std::length_error("Error: Cannot apply window to a filter of size <= 1.");
+        if(win.size() != coeffs.b.size()){
+            throw std::invalid_argument("Error: Filter coefficients and window size do not match.");
         }
-        else {
-            if(win.size() != coeffs.b.size()){
-                throw std::invalid_argument("Error: Filter coefficients and window size do not match.");
-            }
-            else {
-                const auto &w = win.getCoeffs();
-                for (int n = 0; n < coeffs.b.size(); n++){
-                    coeffs.b[n] *= w[n];
-                }
-                return;
-            }
+        const auto &w = win.getCoeffs();
+        for (int n = 0; n < coeffs.b.size(); n++){
+            coeffs.b[n] *= w[n];
         }
+        return;
     }
 
     BodeData Filter::bode(double fs, int plot_points) const{

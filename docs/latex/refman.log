@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.1.6)  6 JAN 2026 23:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.1.6)  7 JAN 2026 08:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1086,22 +1086,22 @@ Underfull \hbox (badness 10000) detected at line 193
 <filter_8hpp__incl.pdf, id=1017, 249.93375pt x 220.825pt>
 File: filter_8hpp__incl.pdf Graphic file (type pdf)
 <use filter_8hpp__incl.pdf>
-Package pdftex.def Info: filter_8hpp__incl.pdf  used on input line 17.
+Package pdftex.def Info: filter_8hpp__incl.pdf  used on input line 16.
 (pdftex.def)             Requested size: 249.0pt x 220.00902pt.
  <./filter_8hpp__dep__incl.pdf>
 <filter_8hpp__dep__incl.pdf, id=1025, 556.0775pt x 176.66pt>
 File: filter_8hpp__dep__incl.pdf Graphic file (type pdf)
 <use filter_8hpp__dep__incl.pdf>
-Package pdftex.def Info: filter_8hpp__dep__incl.pdf  used on input line 25.
+Package pdftex.def Info: filter_8hpp__dep__incl.pdf  used on input line 23.
 (pdftex.def)             Requested size: 350.0pt x 111.19394pt.
 
 [28]
-Underfull \hbox (badness 10000) detected at line 42
+Underfull \hbox (badness 10000) detected at line 40
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 45
+Underfull \hbox (badness 10000) detected at line 43
 [][][]
  []
 
@@ -1109,16 +1109,16 @@ Underfull \hbox (badness 10000) detected at line 45
 <fir_8hpp__incl.pdf, id=1096, 249.93375pt x 276.03125pt>
 File: fir_8hpp__incl.pdf Graphic file (type pdf)
 <use fir_8hpp__incl.pdf>
-Package pdftex.def Info: fir_8hpp__incl.pdf  used on input line 14.
+Package pdftex.def Info: fir_8hpp__incl.pdf  used on input line 13.
 (pdftex.def)             Requested size: 249.0pt x 275.01128pt.
 
 [30]
-Underfull \hbox (badness 10000) detected at line 27
+Underfull \hbox (badness 10000) detected at line 26
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 30
+Underfull \hbox (badness 10000) detected at line 29
 [][][]
  []
 
@@ -1126,43 +1126,10 @@ Underfull \hbox (badness 10000) detected at line 30
 <hamming_8hpp__incl.pdf, id=1133, 296.10625pt x 276.03125pt>
 File: hamming_8hpp__incl.pdf Graphic file (type pdf)
 <use hamming_8hpp__incl.pdf>
-Package pdftex.def Info: hamming_8hpp__incl.pdf  used on input line 15.
+Package pdftex.def Info: hamming_8hpp__incl.pdf  used on input line 14.
 (pdftex.def)             Requested size: 295.0pt x 275.00706pt.
 
 [32]
-Underfull \hbox (badness 10000) detected at line 28
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 31
-[][][]
- []
-
-) (./hamming_8hpp_source.tex) (./hanning_8hpp.tex <./hanning_8hpp__incl.pdf>
-<hanning_8hpp__incl.pdf, id=1160, 296.10625pt x 276.03125pt>
-File: hanning_8hpp__incl.pdf Graphic file (type pdf)
-<use hanning_8hpp__incl.pdf>
-Package pdftex.def Info: hanning_8hpp__incl.pdf  used on input line 15.
-(pdftex.def)             Requested size: 295.0pt x 275.00706pt.
-
-[33]
-Underfull \hbox (badness 10000) detected at line 28
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 31
-[][][]
- []
-
-) (./hanning_8hpp_source.tex) (./iir_8hpp.tex <./iir_8hpp__incl.pdf>
-<iir_8hpp__incl.pdf, id=1186, 249.93375pt x 276.03125pt>
-File: iir_8hpp__incl.pdf Graphic file (type pdf)
-<use iir_8hpp__incl.pdf>
-Package pdftex.def Info: iir_8hpp__incl.pdf  used on input line 14.
-(pdftex.def)             Requested size: 249.0pt x 275.01128pt.
- [34]
 Underfull \hbox (badness 10000) detected at line 27
 [][][]
  []
@@ -1172,19 +1139,52 @@ Underfull \hbox (badness 10000) detected at line 30
 [][][]
  []
 
-) (./iir_8hpp_source.tex [35]) (./plots_8hpp.tex <./plots_8hpp__incl.pdf>
-<plots_8hpp__incl.pdf, id=1223, 185.69376pt x 165.61874pt>
-File: plots_8hpp__incl.pdf Graphic file (type pdf)
-<use plots_8hpp__incl.pdf>
-Package pdftex.def Info: plots_8hpp__incl.pdf  used on input line 15.
-(pdftex.def)             Requested size: 185.0pt x 165.00423pt.
+) (./hamming_8hpp_source.tex) (./hanning_8hpp.tex <./hanning_8hpp__incl.pdf>
+<hanning_8hpp__incl.pdf, id=1160, 296.10625pt x 276.03125pt>
+File: hanning_8hpp__incl.pdf Graphic file (type pdf)
+<use hanning_8hpp__incl.pdf>
+Package pdftex.def Info: hanning_8hpp__incl.pdf  used on input line 14.
+(pdftex.def)             Requested size: 295.0pt x 275.00706pt.
+
+[33]
+Underfull \hbox (badness 10000) detected at line 27
+[][][]
+ []
+
 
 Underfull \hbox (badness 10000) detected at line 30
 [][][]
  []
 
+) (./hanning_8hpp_source.tex) (./iir_8hpp.tex <./iir_8hpp__incl.pdf>
+<iir_8hpp__incl.pdf, id=1186, 249.93375pt x 276.03125pt>
+File: iir_8hpp__incl.pdf Graphic file (type pdf)
+<use iir_8hpp__incl.pdf>
+Package pdftex.def Info: iir_8hpp__incl.pdf  used on input line 13.
+(pdftex.def)             Requested size: 249.0pt x 275.01128pt.
+ [34]
+Underfull \hbox (badness 10000) detected at line 26
+[][][]
+ []
 
-Underfull \hbox (badness 10000) detected at line 33
+
+Underfull \hbox (badness 10000) detected at line 29
+[][][]
+ []
+
+) (./iir_8hpp_source.tex [35]) (./plots_8hpp.tex <./plots_8hpp__incl.pdf>
+<plots_8hpp__incl.pdf, id=1223, 185.69376pt x 165.61874pt>
+File: plots_8hpp__incl.pdf Graphic file (type pdf)
+<use plots_8hpp__incl.pdf>
+Package pdftex.def Info: plots_8hpp__incl.pdf  used on input line 14.
+(pdftex.def)             Requested size: 185.0pt x 165.00423pt.
+
+Underfull \hbox (badness 10000) detected at line 29
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 32
 [][][]
  []
 
@@ -1192,22 +1192,22 @@ Underfull \hbox (badness 10000) detected at line 33
 <window_8hpp__incl.pdf, id=1246, 186.6975pt x 165.61874pt>
 File: window_8hpp__incl.pdf Graphic file (type pdf)
 <use window_8hpp__incl.pdf>
-Package pdftex.def Info: window_8hpp__incl.pdf  used on input line 15.
+Package pdftex.def Info: window_8hpp__incl.pdf  used on input line 14.
 (pdftex.def)             Requested size: 186.0pt x 165.00676pt.
 
 [37] <./window_8hpp__dep__incl.pdf>
 <window_8hpp__dep__incl.pdf, id=1263, 556.0775pt x 242.9075pt>
 File: window_8hpp__dep__incl.pdf Graphic file (type pdf)
 <use window_8hpp__dep__incl.pdf>
-Package pdftex.def Info: window_8hpp__dep__incl.pdf  used on input line 23.
+Package pdftex.def Info: window_8hpp__dep__incl.pdf  used on input line 21.
 (pdftex.def)             Requested size: 350.0pt x 152.89168pt.
 
-Underfull \hbox (badness 10000) detected at line 36
+Underfull \hbox (badness 10000) detected at line 34
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 39
+Underfull \hbox (badness 10000) detected at line 37
 [][][]
  []
 
