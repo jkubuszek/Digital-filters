@@ -28,12 +28,6 @@ std::vector<double> noisy_sine(int size, double freq, double fs, double amp, dou
 
 int main(){
     try{
-        std::vector<double> fir_coeffs(10, 0.1); //smoothing filter
-        std::vector<double> iir_coeffs_b = {0.1}; 
-        std::vector<double> iir_coeffs_a = {1.0, -0.9};
-        JK::FIR fir(fir_coeffs);
-        JK::IIR iir(iir_coeffs_b, iir_coeffs_a);
-
         int fs = 10000;
         int cutoff_f = 100;
 
