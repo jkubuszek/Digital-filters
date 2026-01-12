@@ -1,11 +1,9 @@
 #my files
 test
-*.pdf
 
 build/
 .vscode/
 .cache/
-*.pdf
 *.csv
 
 # Prerequisites
