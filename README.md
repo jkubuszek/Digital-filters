@@ -58,7 +58,7 @@ The project uses CMake. To build the library follow these steps:
 
 ## Documentation
 
-    link to doxygen-generated documentation on github pages:
+link to doxygen-generated documentation on github pages:
     https://jkubuszek.github.io/Digital-filters/ 
 
 ## Licence
