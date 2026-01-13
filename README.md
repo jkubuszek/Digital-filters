@@ -56,6 +56,11 @@ The project uses CMake. To build the library follow these steps:
 * `libs/` - external libraries (sciplot)
 * `docs/` - doxygen documentation 
 
+## Documentation
+
+    link to doxygen-generated documentation on github pages:
+    https://jkubuszek.github.io/Digital-filters/ 
+
 ## Licence
 
 This project uses MIT sharing license. More in `LICENSE`
